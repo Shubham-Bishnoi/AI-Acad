@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import {
   BookOpen,
   Users,
-  FolderGit2,
   Award,
   Target,
   TrendingUp,
@@ -12,6 +11,8 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import HeroBackground from "@/components/layout/HeroBackground";
+import CodingPotentialWaitlistSection from "@/components/sections/CodingPotentialWaitlistSection";
 import FAQSection from "@/components/sections/FAQSection";
 
 const values = [
@@ -77,7 +78,7 @@ export default function AboutPage() {
       <Navbar />
       <main className="flex-1">
         {/* Hero */}
-        <section className="gradient-hero py-16 lg:py-24">
+        <HeroBackground className="py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -96,7 +97,7 @@ export default function AboutPage() {
               </p>
             </motion.div>
           </div>
-        </section>
+        </HeroBackground>
 
         {/* Stats */}
         <section className="py-12 bg-white border-b border-[#E8EDE9]">
@@ -200,14 +201,12 @@ export default function AboutPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.1 }}
-                    className={`relative flex items-start gap-6 md:gap-0 ${
-                      i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                    }`}
+                    className={`relative flex items-start gap-6 md:gap-0 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                      }`}
                   >
                     <div
-                      className={`hidden md:block md:w-1/2 ${
-                        i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"
-                      }`}
+                      className={`hidden md:block md:w-1/2 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"
+                        }`}
                     >
                       <span className="text-xs font-bold text-[#00A86B]">
                         {item.year}
@@ -236,9 +235,8 @@ export default function AboutPage() {
                     </div>
 
                     <div
-                      className={`hidden md:block md:w-1/2 ${
-                        i % 2 === 0 ? "md:pl-12" : "md:pr-12 md:text-right"
-                      }`}
+                      className={`hidden md:block md:w-1/2 ${i % 2 === 0 ? "md:pl-12" : "md:pr-12 md:text-right"
+                        }`}
                     />
                   </motion.div>
                 ))}
@@ -312,6 +310,7 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <CodingPotentialWaitlistSection />
         <FAQSection />
       </main>
       <Footer />

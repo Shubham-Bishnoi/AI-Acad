@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, ArrowUpRight, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import HeroBackground from "@/components/layout/HeroBackground";
 
 export default function ContactPage() {
   return (
@@ -11,7 +12,7 @@ export default function ContactPage() {
       <Navbar />
       <main className="flex-1">
         {/* Hero */}
-        <section className="gradient-hero py-16 lg:py-24">
+        <HeroBackground className="py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -26,7 +27,7 @@ export default function ContactPage() {
               </h1>
             </motion.div>
           </div>
-        </section>
+        </HeroBackground>
 
         {/* Contact */}
         <section className="py-16 lg:py-20 bg-white">

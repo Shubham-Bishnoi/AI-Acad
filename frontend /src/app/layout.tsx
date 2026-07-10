@@ -22,6 +22,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${plusJakartaSans.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col" style={{ fontFamily: 'var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif' }}>

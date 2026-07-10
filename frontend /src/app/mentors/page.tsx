@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Users, BookOpen, ArrowUpRight } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import HeroBackground from "@/components/layout/HeroBackground";
 import { mentors } from "@/data/mentors";
 
 export default function MentorsPage() {
@@ -12,7 +13,7 @@ export default function MentorsPage() {
       <Navbar />
       <main className="flex-1">
         {/* Hero */}
-        <section className="gradient-hero py-16 lg:py-24">
+        <HeroBackground className="py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -30,7 +31,7 @@ export default function MentorsPage() {
               </p>
             </motion.div>
           </div>
-        </section>
+        </HeroBackground>
 
         {/* Featured Mentors - Dark Band */}
         <section className="py-16 bg-[#002B24]">

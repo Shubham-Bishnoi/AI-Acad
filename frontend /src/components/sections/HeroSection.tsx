@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Search, Sparkles, BookOpen, Users, Brain, Code2 } from "lucide-react";
+import HeroBackground from "@/components/layout/HeroBackground";
 import PillButton from "@/components/ui/PillButton";
 
 const floatingIcons = [
@@ -15,7 +16,7 @@ const avatarColors = ["#FFF5E0", "#FFD9E8", "#DFFBF1", "#E6F1FF", "#FFE8E0"];
 
 export default function HeroSection() {
   return (
-    <section className="gradient-hero relative flex min-h-screen items-center overflow-hidden pt-22 sm:pt-24 lg:pt-28">
+    <HeroBackground className="flex min-h-screen items-center">
       {/* Floating decorative icons */}
       {floatingIcons.map(({ Icon, x, y, delay, color }, i) => (
         <motion.div
@@ -142,6 +143,6 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </div>
-    </section>
+    </HeroBackground>
   );
 }

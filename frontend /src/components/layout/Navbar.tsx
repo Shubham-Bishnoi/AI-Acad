@@ -3,19 +3,32 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowUpRight, GraduationCap } from "lucide-react";
+import {
+  Menu,
+  X,
+  ArrowUpRight,
+  ChevronDown,
+  GraduationCap,
+} from "lucide-react";
 import clsx from "clsx";
 
-const navLinks = [
+const homeMenuItems = [
   { label: "Home", href: "/" },
+  { label: "Home V2", href: "/home-v2" },
+  { label: "Home V3", href: "/home-v3" },
+];
+
+const navLinks = [
   { label: "Courses", href: "/courses" },
   { label: "Mentors", href: "/mentors" },
-  { label: "About", href: "/about" },
+  { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isHomeMenuOpen, setIsHomeMenuOpen] = useState(false);
+  const [isMobileHomeMenuOpen, setIsMobileHomeMenuOpen] = useState(false);
   const [navState, setNavState] = useState<"top" | "hidden" | "visible">("top");
 
   useEffect(() => {
@@ -50,6 +63,14 @@ export default function Navbar() {
   const isTop = navState === "top";
   const isVisible = navState === "visible";
 
+  const handleMobileMenuToggle = () => {
+    if (isOpen) {
+      setIsMobileHomeMenuOpen(false);
+    }
+
+    setIsOpen((prev) => !prev);
+  };
+
   return (
     <motion.header
       initial={{ y: -20, opacity: 0 }}
@@ -65,10 +86,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 pt-3 sm:px-6 lg:px-8 lg:pt-4">
         <div
           className={clsx(
-            "flex items-center justify-between px-4 lg:px-6 transition-all duration-300 ease-out",
+            "flex items-center justify-between transition-all duration-300 ease-out",
             isTop
               ? "h-16 lg:h-[76px] bg-transparent border border-transparent shadow-none"
-              : "h-14 lg:h-[68px] rounded-full border border-black/5 bg-white/85 shadow-[0_12px_40px_rgba(7,28,26,0.10)] backdrop-blur-xl",
+              : "h-14 px-4 lg:h-[68px] lg:px-6 rounded-full border border-black/5 bg-white/85 shadow-[0_12px_40px_rgba(7,28,26,0.10)] backdrop-blur-xl",
           )}
         >
           {/* Logo */}
@@ -93,6 +114,53 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
+            <div
+              className="relative"
+              onMouseEnter={() => setIsHomeMenuOpen(true)}
+              onMouseLeave={() => setIsHomeMenuOpen(false)}
+            >
+              <button
+                type="button"
+                onClick={() => setIsHomeMenuOpen((prev) => !prev)}
+                className={clsx(
+                  "inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-[#5A6B69] transition-all duration-200 hover:text-[#071C1A]",
+                  isTop ? "hover:bg-white/55" : "hover:bg-[#F0F4F2]",
+                )}
+                aria-expanded={isHomeMenuOpen}
+              >
+                Home
+                <ChevronDown
+                  className={clsx(
+                    "h-4 w-4 transition-transform duration-200",
+                    isHomeMenuOpen && "rotate-180",
+                  )}
+                />
+              </button>
+
+              <AnimatePresence>
+                {isHomeMenuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute left-0 top-full mt-3 w-52 overflow-hidden rounded-3xl border border-black/5 bg-white/95 p-2 shadow-[0_18px_50px_rgba(7,28,26,0.12)] backdrop-blur-xl"
+                  >
+                    {homeMenuItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setIsHomeMenuOpen(false)}
+                        className="block rounded-2xl px-4 py-3 text-sm font-medium text-[#5A6B69] transition-all hover:bg-[#F0F4F2] hover:text-[#071C1A]"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -128,7 +196,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={handleMobileMenuToggle}
             className={clsx(
               "rounded-xl p-2 transition-colors lg:hidden",
               isTop ? "hover:bg-white/55" : "hover:bg-[#F0F4F2]",
@@ -154,6 +222,51 @@ export default function Navbar() {
             className="mx-4 mt-3 overflow-hidden rounded-3xl border border-black/5 bg-white/95 shadow-[0_18px_50px_rgba(7,28,26,0.12)] backdrop-blur-xl lg:hidden sm:mx-6 lg:mx-8"
           >
             <div className="px-4 py-4 space-y-1">
+              <div className="rounded-2xl">
+                <button
+                  type="button"
+                  onClick={() => setIsMobileHomeMenuOpen((prev) => !prev)}
+                  className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-[#5A6B69] transition-all hover:bg-[#F0F4F2] hover:text-[#071C1A]"
+                  aria-expanded={isMobileHomeMenuOpen}
+                >
+                  <span>Home</span>
+                  <ChevronDown
+                    className={clsx(
+                      "h-4 w-4 transition-transform duration-200",
+                      isMobileHomeMenuOpen && "rotate-180",
+                    )}
+                  />
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {isMobileHomeMenuOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="mt-1 space-y-1 rounded-2xl bg-[#F8FAF9] p-2">
+                        {homeMenuItems.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => {
+                              setIsMobileHomeMenuOpen(false);
+                              setIsOpen(false);
+                            }}
+                            className="block rounded-xl px-4 py-3 text-sm font-medium text-[#5A6B69] transition-all hover:bg-white hover:text-[#071C1A]"
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
               {navLinks.map((link) => (
                 <Link
                   key={link.href}

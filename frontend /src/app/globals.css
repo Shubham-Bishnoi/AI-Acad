@@ -58,34 +58,71 @@ body {
   box-shadow: 0 2px 16px rgba(7, 28, 26, 0.04);
 }
 
+.shadow-card-hover {
+  box-shadow: 0 16px 40px rgba(7, 28, 26, 0.12);
+}
+
+.shadow-soft-lg {
+  box-shadow: 0 18px 50px rgba(7, 28, 26, 0.12);
+}
+
 .shadow-hover {
   box-shadow: 0 8px 32px rgba(7, 28, 26, 0.10);
+}
+
+.bg-gff-dark-green {
+  background-color: #062E2A;
+}
+
+.pinstripe-bg {
+  background-image: repeating-linear-gradient(90deg,
+      transparent,
+      transparent 24px,
+      rgb(0 0 0 / 0.03) 24px,
+      rgb(0 0 0 / 0.03) 25px);
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #F8FAF9;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #CBD5D1;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3A0;
 }
 
 /* Animations */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 @keyframes float-slow {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-8px) rotate(3deg); }
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
 }
 
 .animate-float {
@@ -103,8 +140,13 @@ body {
 
 /* Marquee animation */
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
@@ -113,7 +155,10 @@ body {
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

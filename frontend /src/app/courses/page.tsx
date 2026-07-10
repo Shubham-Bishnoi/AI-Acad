@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, Clock, BookOpen, ArrowUpRight, X, Flame, CheckCircle2 } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import SectionHeading from "@/components/ui/SectionHeading";
+import HeroBackground from "@/components/layout/HeroBackground";
 import { courses, courseCategories, Course } from "@/data/courses";
 
 function CourseDetailModal({
@@ -38,14 +38,14 @@ function CourseDetailModal({
               course.category === "AI Foundations"
                 ? "linear-gradient(135deg, #DFFBF1, #E6F1FF)"
                 : course.category === "Machine Learning"
-                ? "linear-gradient(135deg, #E8E0FF, #FFD9E8)"
-                : course.category === "Generative AI"
-                ? "linear-gradient(135deg, #FFD9E8, #E6F1FF)"
-                : course.category === "Projects"
-                ? "linear-gradient(135deg, #FFF5E0, #FFE8E0)"
-                : course.category === "Placement Prep"
-                ? "linear-gradient(135deg, #E6F1FF, #DFFBF1)"
-                : "linear-gradient(135deg, #E8E0FF, #E6F1FF)",
+                  ? "linear-gradient(135deg, #E8E0FF, #FFD9E8)"
+                  : course.category === "Generative AI"
+                    ? "linear-gradient(135deg, #FFD9E8, #E6F1FF)"
+                    : course.category === "Projects"
+                      ? "linear-gradient(135deg, #FFF5E0, #FFE8E0)"
+                      : course.category === "Placement Prep"
+                        ? "linear-gradient(135deg, #E6F1FF, #DFFBF1)"
+                        : "linear-gradient(135deg, #E8E0FF, #E6F1FF)",
           }}
         >
           <button
@@ -158,7 +158,7 @@ export default function CoursesPage() {
       <Navbar />
       <main className="flex-1">
         {/* Hero */}
-        <section className="gradient-hero py-16 lg:py-24">
+        <HeroBackground className="py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -177,7 +177,7 @@ export default function CoursesPage() {
               </p>
             </motion.div>
           </div>
-        </section>
+        </HeroBackground>
 
         {/* Courses */}
         <section className="py-12 lg:py-16 bg-white">
@@ -202,11 +202,10 @@ export default function CoursesPage() {
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                    activeCategory === cat
-                      ? "bg-[#00A86B] text-white shadow-sm"
-                      : "bg-[#F0F4F2] text-[#5A6B69] hover:bg-[#E8EDE9]"
-                  }`}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeCategory === cat
+                    ? "bg-[#00A86B] text-white shadow-sm"
+                    : "bg-[#F0F4F2] text-[#5A6B69] hover:bg-[#E8EDE9]"
+                    }`}
                 >
                   {cat}
                 </button>
@@ -232,14 +231,14 @@ export default function CoursesPage() {
                         course.category === "AI Foundations"
                           ? "linear-gradient(135deg, #DFFBF1, #E6F1FF)"
                           : course.category === "Machine Learning"
-                          ? "linear-gradient(135deg, #E8E0FF, #FFD9E8)"
-                          : course.category === "Generative AI"
-                          ? "linear-gradient(135deg, #FFD9E8, #E6F1FF)"
-                          : course.category === "Projects"
-                          ? "linear-gradient(135deg, #FFF5E0, #FFE8E0)"
-                          : course.category === "Placement Prep"
-                          ? "linear-gradient(135deg, #E6F1FF, #DFFBF1)"
-                          : "linear-gradient(135deg, #E8E0FF, #E6F1FF)",
+                            ? "linear-gradient(135deg, #E8E0FF, #FFD9E8)"
+                            : course.category === "Generative AI"
+                              ? "linear-gradient(135deg, #FFD9E8, #E6F1FF)"
+                              : course.category === "Projects"
+                                ? "linear-gradient(135deg, #FFF5E0, #FFE8E0)"
+                                : course.category === "Placement Prep"
+                                  ? "linear-gradient(135deg, #E6F1FF, #DFFBF1)"
+                                  : "linear-gradient(135deg, #E8E0FF, #E6F1FF)",
                     }}
                   >
                     <div className="w-16 h-16 rounded-2xl bg-white/40 backdrop-blur-sm flex items-center justify-center border border-white/60">
