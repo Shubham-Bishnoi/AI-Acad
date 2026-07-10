@@ -33,7 +33,7 @@ export const courses: Course[] = [
     duration: "6 weeks",
     sessions: 24,
     tags: ["Beginner Friendly", "Mentor Led", "Project Based", "Certification"],
-    image: "/images/course-ai-foundations.png",
+    image: "/images/code.jpg",
     popular: true,
     curriculum: [
       "Python Basics & Environment Setup",
@@ -54,7 +54,7 @@ export const courses: Course[] = [
     duration: "8 weeks",
     sessions: 32,
     tags: ["Project Based", "Mentor Led", "Certification"],
-    image: "/images/course-ml.png",
+    image: "/images/digital.jpg",
     popular: true,
     curriculum: [
       "ML Pipeline & Data Preprocessing",
@@ -77,7 +77,7 @@ export const courses: Course[] = [
     duration: "6 weeks",
     sessions: 24,
     tags: ["Beginner Friendly", "Mentor Led", "Project Based"],
-    image: "/images/course-genai.png",
+    image: "/images/stakeholder.jpg",
     popular: true,
     curriculum: [
       "Introduction to Generative AI",
@@ -98,7 +98,7 @@ export const courses: Course[] = [
     duration: "5 weeks",
     sessions: 20,
     tags: ["Project Based", "Mentor Led"],
-    image: "/images/course-agents.png",
+    image: "/images/html-css.jpg",
     curriculum: [
       "Agent Architecture & Design Patterns",
       "Tool Use & Function Calling",
@@ -117,7 +117,7 @@ export const courses: Course[] = [
     duration: "5 weeks",
     sessions: 20,
     tags: ["Beginner Friendly", "Certification"],
-    image: "/images/course-analytics.png",
+    image: "/images/google ads.jpg",
     curriculum: [
       "Data Collection & Cleaning",
       "Exploratory Data Analysis",
@@ -136,7 +136,7 @@ export const courses: Course[] = [
     duration: "4 weeks",
     sessions: 16,
     tags: ["Project Based", "Certification", "Placement Ready"],
-    image: "/images/course-capstone.png",
+    image: "/images/ux research.jpg",
     curriculum: [
       "Project Planning & Scope Definition",
       "Data Collection & Processing",
@@ -154,7 +154,7 @@ export const courses: Course[] = [
     duration: "3 weeks",
     sessions: 12,
     tags: ["Certification", "Placement Ready"],
-    image: "/images/course-placement.png",
+    image: "/images/design.jpg",
     curriculum: [
       "Resume Building & LinkedIn Optimization",
       "Technical Interview Preparation",
@@ -172,7 +172,7 @@ export const courses: Course[] = [
     duration: "8 weeks",
     sessions: 32,
     tags: ["Project Based", "Mentor Led", "Certification"],
-    image: "/images/course-dl.png",
+    image: "/images/financial.jpg",
     curriculum: [
       "Neural Network Fundamentals",
       "Convolutional Neural Networks",

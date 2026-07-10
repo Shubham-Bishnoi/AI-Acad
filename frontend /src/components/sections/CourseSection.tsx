@@ -18,24 +18,12 @@ function FeaturedCourseCard({ course }: { course: Course }) {
       <div className="grid md:grid-cols-2 gap-0">
         {/* Image side */}
         <div className="relative h-56 md:h-auto min-h-[280px] overflow-hidden">
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                course.category === "AI Foundations"
-                  ? "linear-gradient(135deg, #DFFBF1, #E6F1FF)"
-                  : course.category === "Machine Learning"
-                  ? "linear-gradient(135deg, #E8E0FF, #FFD9E8)"
-                  : course.category === "Generative AI"
-                  ? "linear-gradient(135deg, #FFD9E8, #E6F1FF)"
-                  : "linear-gradient(135deg, #E6F1FF, #DFFBF1)",
-            }}
+          <img
+            src={course.image}
+            alt={course.title}
+            className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-3xl bg-white/30 backdrop-blur-sm flex items-center justify-center border border-white/50">
-              <BookOpen className="w-12 h-12 text-[#071C1A]/40" />
-            </div>
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#071C1A]/22 via-transparent to-white/16" />
           {course.popular && (
             <span className="absolute top-4 right-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#071C1A] text-white text-xs font-medium">
               <Flame className="w-3.5 h-3.5 text-orange-400" />
@@ -101,26 +89,13 @@ function CourseCard({ course }: { course: Course }) {
       className="bg-white rounded-2xl border border-[#E8EDE9] overflow-hidden shadow-card hover:shadow-hover transition-all duration-300 group"
     >
       {/* Image */}
-      <div
-        className="relative h-40 flex items-center justify-center"
-        style={{
-          background:
-            course.category === "AI Foundations"
-              ? "linear-gradient(135deg, #DFFBF1, #E6F1FF)"
-              : course.category === "Machine Learning"
-              ? "linear-gradient(135deg, #E8E0FF, #FFD9E8)"
-              : course.category === "Generative AI"
-              ? "linear-gradient(135deg, #FFD9E8, #E6F1FF)"
-              : course.category === "Projects"
-              ? "linear-gradient(135deg, #FFF5E0, #FFE8E0)"
-              : course.category === "Placement Prep"
-              ? "linear-gradient(135deg, #E6F1FF, #DFFBF1)"
-              : "linear-gradient(135deg, #E8E0FF, #E6F1FF)",
-        }}
-      >
-        <div className="w-16 h-16 rounded-2xl bg-white/40 backdrop-blur-sm flex items-center justify-center border border-white/60">
-          <BookOpen className="w-7 h-7 text-[#071C1A]/40" />
-        </div>
+      <div className="relative h-40 overflow-hidden">
+        <img
+          src={course.image}
+          alt={course.title}
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#071C1A]/26 via-transparent to-white/10" />
         {course.popular && (
           <span className="absolute top-3 right-3 inline-flex items-center gap-1 px-2 py-1 rounded-full bg-[#071C1A] text-white text-[10px] font-medium">
             <Flame className="w-3 h-3 text-orange-400" />

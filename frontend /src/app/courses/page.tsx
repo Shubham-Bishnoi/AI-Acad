@@ -31,32 +31,19 @@ function CourseDetailModal({
         className="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl"
       >
         {/* Header */}
-        <div
-          className="h-48 rounded-t-3xl flex items-center justify-center relative"
-          style={{
-            background:
-              course.category === "AI Foundations"
-                ? "linear-gradient(135deg, #DFFBF1, #E6F1FF)"
-                : course.category === "Machine Learning"
-                  ? "linear-gradient(135deg, #E8E0FF, #FFD9E8)"
-                  : course.category === "Generative AI"
-                    ? "linear-gradient(135deg, #FFD9E8, #E6F1FF)"
-                    : course.category === "Projects"
-                      ? "linear-gradient(135deg, #FFF5E0, #FFE8E0)"
-                      : course.category === "Placement Prep"
-                        ? "linear-gradient(135deg, #E6F1FF, #DFFBF1)"
-                        : "linear-gradient(135deg, #E8E0FF, #E6F1FF)",
-          }}
-        >
+        <div className="relative h-48 overflow-hidden rounded-t-3xl">
+          <img
+            src={course.image}
+            alt={course.title}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#071C1A]/28 via-transparent to-white/12" />
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center hover:bg-white transition-colors"
+            className="absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 transition-colors hover:bg-white"
           >
             <X className="w-4 h-4" />
           </button>
-          <div className="w-20 h-20 rounded-2xl bg-white/40 backdrop-blur-sm flex items-center justify-center border border-white/60">
-            <BookOpen className="w-10 h-10 text-[#071C1A]/40" />
-          </div>
         </div>
 
         {/* Content */}
@@ -224,26 +211,13 @@ export default function CoursesPage() {
                   onClick={() => setSelectedCourse(course)}
                   className="bg-[#F8FAF9] rounded-2xl border border-[#E8EDE9] overflow-hidden hover:shadow-hover transition-all duration-300 group cursor-pointer"
                 >
-                  <div
-                    className="h-40 flex items-center justify-center relative"
-                    style={{
-                      background:
-                        course.category === "AI Foundations"
-                          ? "linear-gradient(135deg, #DFFBF1, #E6F1FF)"
-                          : course.category === "Machine Learning"
-                            ? "linear-gradient(135deg, #E8E0FF, #FFD9E8)"
-                            : course.category === "Generative AI"
-                              ? "linear-gradient(135deg, #FFD9E8, #E6F1FF)"
-                              : course.category === "Projects"
-                                ? "linear-gradient(135deg, #FFF5E0, #FFE8E0)"
-                                : course.category === "Placement Prep"
-                                  ? "linear-gradient(135deg, #E6F1FF, #DFFBF1)"
-                                  : "linear-gradient(135deg, #E8E0FF, #E6F1FF)",
-                    }}
-                  >
-                    <div className="w-16 h-16 rounded-2xl bg-white/40 backdrop-blur-sm flex items-center justify-center border border-white/60">
-                      <BookOpen className="w-7 h-7 text-[#071C1A]/40" />
-                    </div>
+                  <div className="relative h-40 overflow-hidden">
+                    <img
+                      src={course.image}
+                      alt={course.title}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#071C1A]/26 via-transparent to-white/10" />
                     {course.popular && (
                       <span className="absolute top-3 right-3 inline-flex items-center gap-1 px-2 py-1 rounded-full bg-[#071C1A] text-white text-[10px] font-medium">
                         <Flame className="w-3 h-3 text-orange-400" />

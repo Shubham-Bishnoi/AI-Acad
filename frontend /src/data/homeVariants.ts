@@ -53,7 +53,7 @@ export const courses: Course[] = [
     price: "$199",
     duration: "6 weeks",
     lectures: 42,
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=400&fit=crop",
+    image: "/images/code.jpg",
     instructor: "Dr. Sarah Chen",
   },
   {
@@ -63,7 +63,7 @@ export const courses: Course[] = [
     price: "$249",
     duration: "8 weeks",
     lectures: 56,
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
+    image: "/images/digital.jpg",
     instructor: "Prof. Michael Park",
   },
   {
@@ -73,7 +73,7 @@ export const courses: Course[] = [
     price: "$179",
     duration: "5 weeks",
     lectures: 35,
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
+    image: "/images/stakeholder.jpg",
     instructor: "Alex Thompson",
   },
   {
@@ -83,7 +83,7 @@ export const courses: Course[] = [
     price: "$299",
     duration: "7 weeks",
     lectures: 48,
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+    image: "/images/html-css.jpg",
     instructor: "Dr. James Wilson",
   },
   {
@@ -93,7 +93,7 @@ export const courses: Course[] = [
     price: "$219",
     duration: "6 weeks",
     lectures: 40,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+    image: "/images/google ads.jpg",
     instructor: "Lisa Rodriguez",
   },
   {
@@ -103,7 +103,7 @@ export const courses: Course[] = [
     price: "$349",
     duration: "10 weeks",
     lectures: 30,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+    image: "/images/ux research.jpg",
     instructor: "Industry Mentors",
   },
 ];
