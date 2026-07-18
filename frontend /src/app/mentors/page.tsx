@@ -20,12 +20,12 @@ export default function MentorsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <p className="text-sm text-[#5A6B69] mb-2">Home / Mentors</p>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#071C1A] mb-4">
+              <p className="text-sm text-[#5D667A] mb-2">Home / Mentors</p>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#07162F] mb-4">
                 Meet Our Industry&apos;s{" "}
-                <span className="text-[#00A86B]">Leading Expert Mentors</span>
+                <span className="text-[#155DFC]">Leading Expert Mentors</span>
               </h1>
-              <p className="text-base text-[#5A6B69] max-w-xl">
+              <p className="text-base text-[#5D667A] max-w-xl">
                 Learn from professionals who have built AI systems at the
                 world&apos;s top technology companies.
               </p>
@@ -34,7 +34,7 @@ export default function MentorsPage() {
         </HeroBackground>
 
         {/* Featured Mentors - Dark Band */}
-        <section className="py-16 bg-[#002B24]">
+        <section className="py-16 bg-[#07162F]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-10">
               <div>
@@ -46,7 +46,7 @@ export default function MentorsPage() {
               </div>
               <a
                 href="/apply"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#002B24] text-sm font-semibold hover:bg-gray-100 transition-all group"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#07162F] text-sm font-semibold hover:bg-gray-100 transition-all group"
               >
                 View All Mentors
                 <ArrowUpRight className="w-4 h-4" />
@@ -64,7 +64,7 @@ export default function MentorsPage() {
                   className="text-center"
                 >
                   <div
-                    className="w-24 h-40 sm:w-28 sm:h-48 rounded-full mx-auto mb-3 flex items-center justify-center text-xl font-bold text-[#071C1A]"
+                    className="w-24 h-40 sm:w-28 sm:h-48 rounded-full mx-auto mb-3 flex items-center justify-center text-xl font-bold text-[#07162F]"
                     style={{ backgroundColor: mentor.bgColor }}
                   >
                     {mentor.initials}
@@ -82,7 +82,7 @@ export default function MentorsPage() {
         {/* All Mentors Grid */}
         <section className="py-16 lg:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-[#071C1A] mb-8 text-center">
+            <h2 className="text-2xl font-bold text-[#07162F] mb-8 text-center">
               All Mentors
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -93,22 +93,22 @@ export default function MentorsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.06 }}
-                  className="bg-[#F8FAF9] rounded-3xl border border-[#E8EDE9] p-6 text-center hover:shadow-hover transition-all duration-300"
+                  className="bg-[#F8FAFF] rounded-3xl border border-[#E4EAF5] p-6 text-center hover:shadow-hover transition-all duration-300"
                 >
                   <div
-                    className="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center text-xl font-bold text-[#071C1A]"
+                    className="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center text-xl font-bold text-[#07162F]"
                     style={{ backgroundColor: mentor.bgColor }}
                   >
                     {mentor.initials}
                   </div>
-                  <h3 className="text-base font-bold text-[#071C1A] mb-1">
+                  <h3 className="text-base font-bold text-[#07162F] mb-1">
                     {mentor.name}
                   </h3>
-                  <p className="text-xs text-[#5A6B69] mb-4">{mentor.role}</p>
-                  <p className="text-xs text-[#5A6B69] leading-relaxed mb-4 line-clamp-3">
+                  <p className="text-xs text-[#5D667A] mb-4">{mentor.role}</p>
+                  <p className="text-xs text-[#5D667A] leading-relaxed mb-4 line-clamp-3">
                     {mentor.bio}
                   </p>
-                  <div className="flex items-center justify-center gap-4 text-xs text-[#8B9A97] mb-4">
+                  <div className="flex items-center justify-center gap-4 text-xs text-[#8B93A7] mb-4">
                     <span className="flex items-center gap-1">
                       <Users className="w-3 h-3" />
                       {mentor.students}
@@ -122,7 +122,7 @@ export default function MentorsPage() {
                     {mentor.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 rounded-full text-[10px] font-medium bg-[#F0F4F2] text-[#5A6B69]"
+                        className="px-2.5 py-1 rounded-full text-[10px] font-medium bg-[#EEF3FB] text-[#5D667A]"
                       >
                         {tag}
                       </span>
@@ -135,17 +135,17 @@ export default function MentorsPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-12 bg-[#F8FAF9]">
+        <section className="py-12 bg-[#F8FAFF]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 className="text-xl font-bold text-[#071C1A] mb-3">
+            <h3 className="text-xl font-bold text-[#07162F] mb-3">
               Want to learn from these mentors?
             </h3>
-            <p className="text-sm text-[#5A6B69] mb-6">
+            <p className="text-sm text-[#5D667A] mb-6">
               Apply now and get matched with the best mentor for your goals.
             </p>
             <a
               href="/apply"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#00A86B] text-white text-sm font-semibold hover:bg-[#008F5A] transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#155DFC] text-white text-sm font-semibold hover:bg-[#0F4BD8] transition-all"
             >
               Apply Now
               <ArrowUpRight className="w-4 h-4" />

@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {
-  GraduationCap,
   Upload,
   ArrowRight,
   CheckCircle2,
@@ -37,25 +36,25 @@ export default function ApplyPage() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#F8FAF9] p-6">
+      <div className="min-h-screen flex items-center justify-center bg-[#F8FAFF] p-6">
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           className="text-center max-w-md"
         >
-          <div className="w-16 h-16 rounded-2xl bg-[#DFFBF1] flex items-center justify-center mx-auto mb-4">
-            <CheckCircle2 className="w-8 h-8 text-[#00A86B]" />
+          <div className="w-16 h-16 rounded-2xl bg-[#EAF2FF] flex items-center justify-center mx-auto mb-4">
+            <CheckCircle2 className="w-8 h-8 text-[#155DFC]" />
           </div>
-          <h1 className="text-2xl font-bold text-[#071C1A] mb-2">
+          <h1 className="text-2xl font-bold text-[#07162F] mb-2">
             Application Submitted!
           </h1>
-          <p className="text-sm text-[#5A6B69] mb-6">
+          <p className="text-sm text-[#5D667A] mb-6">
             Thank you for applying to GFF AI Academy. Our team will review your
             application and get back to you within 3-5 business days.
           </p>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#00A86B] text-white text-sm font-semibold hover:bg-[#008F5A] transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#155DFC] text-white text-sm font-semibold hover:bg-[#0F4BD8] transition-all"
           >
             Back to Home
           </Link>
@@ -65,19 +64,20 @@ export default function ApplyPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8FAF9]">
+    <div className="min-h-screen bg-[#F8FAFF]">
       {/* Header */}
-      <div className="bg-white border-b border-[#E8EDE9]">
+      <div className="bg-white border-b border-[#E4EAF5]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-[#00A86B] flex items-center justify-center">
-              <GraduationCap className="w-4 h-4 text-white" />
-            </div>
-            <span className="text-sm font-bold text-[#071C1A]">
-              GFF AI Academy
-            </span>
+          <Link href="/" className="flex items-center" aria-label="GFF AI Academy — home">
+            <img
+              src="/images/gff-ai-logo.png"
+              alt="GFF AI Academy"
+              width={792}
+              height={240}
+              className="h-9 w-auto max-w-[145px] object-contain sm:h-10 sm:max-w-[165px]"
+            />
           </Link>
-          <span className="text-xs text-[#5A6B69]">Student Application</span>
+          <span className="text-xs text-[#5D667A]">Student Application</span>
         </div>
       </div>
 
@@ -89,10 +89,10 @@ export default function ApplyPage() {
           transition={{ duration: 0.5 }}
         >
           <div className="text-center mb-8">
-            <h1 className="text-2xl sm:text-3xl font-bold text-[#071C1A] mb-2">
+            <h1 className="text-2xl sm:text-3xl font-bold text-[#07162F] mb-2">
               Student Application
             </h1>
-            <p className="text-sm text-[#5A6B69]">
+            <p className="text-sm text-[#5D667A]">
               Fill in your details below to apply for the AI program.
             </p>
           </div>
@@ -105,75 +105,75 @@ export default function ApplyPage() {
             className="space-y-6"
           >
             {/* Personal Info */}
-            <div className="bg-white rounded-2xl border border-[#E8EDE9] p-6">
-              <h3 className="text-sm font-bold text-[#071C1A] mb-4 flex items-center gap-2">
-                <User className="w-4 h-4 text-[#00A86B]" />
+            <div className="bg-white rounded-2xl border border-[#E4EAF5] p-6">
+              <h3 className="text-sm font-bold text-[#07162F] mb-4 flex items-center gap-2">
+                <User className="w-4 h-4 text-[#155DFC]" />
                 Personal Information
               </h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-medium text-[#071C1A] mb-1.5">
+                  <label className="block text-xs font-medium text-[#07162F] mb-1.5">
                     Full Name *
                   </label>
                   <input
                     required
                     type="text"
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#F8FAF9] border border-[#E8EDE9] text-sm focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F8FAFF] border border-[#E4EAF5] text-sm focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC]"
                     placeholder="John Doe"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#071C1A] mb-1.5">
+                  <label className="block text-xs font-medium text-[#07162F] mb-1.5">
                     Email *
                   </label>
                   <input
                     required
                     type="email"
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#F8FAF9] border border-[#E8EDE9] text-sm focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F8FAFF] border border-[#E4EAF5] text-sm focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC]"
                     placeholder="john@example.com"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#071C1A] mb-1.5">
+                  <label className="block text-xs font-medium text-[#07162F] mb-1.5">
                     Phone *
                   </label>
                   <input
                     required
                     type="tel"
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#F8FAF9] border border-[#E8EDE9] text-sm focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F8FAFF] border border-[#E4EAF5] text-sm focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC]"
                     placeholder="+91 98765 43210"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#071C1A] mb-1.5">
+                  <label className="block text-xs font-medium text-[#07162F] mb-1.5">
                     College/University *
                   </label>
                   <input
                     required
                     type="text"
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#F8FAF9] border border-[#E8EDE9] text-sm focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F8FAFF] border border-[#E4EAF5] text-sm focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC]"
                     placeholder="IIT Bombay"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#071C1A] mb-1.5">
+                  <label className="block text-xs font-medium text-[#07162F] mb-1.5">
                     Degree/Course *
                   </label>
                   <input
                     required
                     type="text"
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#F8FAF9] border border-[#E8EDE9] text-sm focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F8FAFF] border border-[#E4EAF5] text-sm focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC]"
                     placeholder="B.Tech Computer Science"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#071C1A] mb-1.5">
+                  <label className="block text-xs font-medium text-[#07162F] mb-1.5">
                     Year/Semester *
                   </label>
                   <input
                     required
                     type="text"
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#F8FAF9] border border-[#E8EDE9] text-sm focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B]"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F8FAFF] border border-[#E4EAF5] text-sm focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC]"
                     placeholder="3rd Year"
                   />
                 </div>
@@ -181,47 +181,47 @@ export default function ApplyPage() {
             </div>
 
             {/* Links */}
-            <div className="bg-white rounded-2xl border border-[#E8EDE9] p-6">
-              <h3 className="text-sm font-bold text-[#071C1A] mb-4 flex items-center gap-2">
-                <Link2 className="w-4 h-4 text-[#00A86B]" />
+            <div className="bg-white rounded-2xl border border-[#E4EAF5] p-6">
+              <h3 className="text-sm font-bold text-[#07162F] mb-4 flex items-center gap-2">
+                <Link2 className="w-4 h-4 text-[#155DFC]" />
                 Your Links (Optional)
               </h3>
               <div className="grid sm:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-xs font-medium text-[#071C1A] mb-1.5">
+                  <label className="block text-xs font-medium text-[#07162F] mb-1.5">
                     GitHub
                   </label>
                   <div className="relative">
-                    <Code2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#A3A3A3]" />
+                    <Code2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#9AA3B5]" />
                     <input
                       type="url"
-                      className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#F8FAF9] border border-[#E8EDE9] text-sm focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B]"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#F8FAFF] border border-[#E4EAF5] text-sm focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC]"
                       placeholder="github.com/username"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#071C1A] mb-1.5">
+                  <label className="block text-xs font-medium text-[#07162F] mb-1.5">
                     LinkedIn
                   </label>
                   <div className="relative">
-                    <ExternalLink className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#A3A3A3]" />
+                    <ExternalLink className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#9AA3B5]" />
                     <input
                       type="url"
-                      className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#F8FAF9] border border-[#E8EDE9] text-sm focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B]"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#F8FAFF] border border-[#E4EAF5] text-sm focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC]"
                       placeholder="linkedin.com/in/username"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#071C1A] mb-1.5">
+                  <label className="block text-xs font-medium text-[#07162F] mb-1.5">
                     Portfolio/Projects
                   </label>
                   <div className="relative">
-                    <Link2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#A3A3A3]" />
+                    <Link2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#9AA3B5]" />
                     <input
                       type="url"
-                      className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#F8FAF9] border border-[#E8EDE9] text-sm focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B]"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#F8FAFF] border border-[#E4EAF5] text-sm focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC]"
                       placeholder="your-portfolio.com"
                     />
                   </div>
@@ -230,14 +230,14 @@ export default function ApplyPage() {
             </div>
 
             {/* Preferences */}
-            <div className="bg-white rounded-2xl border border-[#E8EDE9] p-6">
-              <h3 className="text-sm font-bold text-[#071C1A] mb-4 flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-[#00A86B]" />
+            <div className="bg-white rounded-2xl border border-[#E4EAF5] p-6">
+              <h3 className="text-sm font-bold text-[#07162F] mb-4 flex items-center gap-2">
+                <BookOpen className="w-4 h-4 text-[#155DFC]" />
                 Program Preferences
               </h3>
               <div className="space-y-4">
                 <div>
-                  <label className="block text-xs font-medium text-[#071C1A] mb-2">
+                  <label className="block text-xs font-medium text-[#07162F] mb-2">
                     Preferred Specialization *
                   </label>
                   <div className="flex flex-wrap gap-2">
@@ -248,8 +248,8 @@ export default function ApplyPage() {
                         onClick={() => setSpec(s)}
                         className={`px-4 py-2 rounded-full text-xs font-medium transition-all ${
                           spec === s
-                            ? "bg-[#00A86B] text-white"
-                            : "bg-[#F0F4F2] text-[#5A6B69] hover:bg-[#E8EDE9]"
+                            ? "bg-[#155DFC] text-white"
+                            : "bg-[#EEF3FB] text-[#5D667A] hover:bg-[#E4EAF5]"
                         }`}
                       >
                         {s}
@@ -258,13 +258,13 @@ export default function ApplyPage() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#071C1A] mb-1.5">
+                  <label className="block text-xs font-medium text-[#07162F] mb-1.5">
                     Statement of Interest *
                   </label>
                   <textarea
                     required
                     rows={4}
-                    className="w-full px-4 py-2.5 rounded-xl bg-[#F8FAF9] border border-[#E8EDE9] text-sm focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B] resize-none"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#F8FAFF] border border-[#E4EAF5] text-sm focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC] resize-none"
                     placeholder="Why do you want to join GFF AI Academy? What are your career goals?"
                   />
                 </div>
@@ -272,18 +272,18 @@ export default function ApplyPage() {
             </div>
 
             {/* Resume */}
-            <div className="bg-white rounded-2xl border border-[#E8EDE9] p-6">
-              <h3 className="text-sm font-bold text-[#071C1A] mb-4 flex items-center gap-2">
-                <FileText className="w-4 h-4 text-[#00A86B]" />
+            <div className="bg-white rounded-2xl border border-[#E4EAF5] p-6">
+              <h3 className="text-sm font-bold text-[#07162F] mb-4 flex items-center gap-2">
+                <FileText className="w-4 h-4 text-[#155DFC]" />
                 Resume/CV (Optional)
               </h3>
-              <div className="border-2 border-dashed border-[#E8EDE9] rounded-xl p-8 text-center hover:border-[#00A86B]/40 transition-colors cursor-pointer">
-                <Upload className="w-8 h-8 text-[#A3A3A3] mx-auto mb-2" />
-                <p className="text-sm text-[#5A6B69]">
+              <div className="border-2 border-dashed border-[#E4EAF5] rounded-xl p-8 text-center hover:border-[#155DFC]/40 transition-colors cursor-pointer">
+                <Upload className="w-8 h-8 text-[#9AA3B5] mx-auto mb-2" />
+                <p className="text-sm text-[#5D667A]">
                   Drag and drop your resume here, or{" "}
-                  <span className="text-[#00A86B] font-medium">browse</span>
+                  <span className="text-[#155DFC] font-medium">browse</span>
                 </p>
-                <p className="text-xs text-[#A3A3A3] mt-1">
+                <p className="text-xs text-[#9AA3B5] mt-1">
                   Supports PDF, DOC up to 5MB
                 </p>
               </div>
@@ -293,13 +293,13 @@ export default function ApplyPage() {
             <div className="flex items-center justify-between pt-4">
               <Link
                 href="/"
-                className="text-sm text-[#5A6B69] hover:text-[#071C1A] transition-colors"
+                className="text-sm text-[#5D667A] hover:text-[#07162F] transition-colors"
               >
                 Cancel
               </Link>
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#00A86B] text-white text-sm font-semibold hover:bg-[#008F5A] transition-all"
+                className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#155DFC] text-white text-sm font-semibold hover:bg-[#0F4BD8] transition-all"
               >
                 Submit Application
                 <ArrowRight className="w-4 h-4" />

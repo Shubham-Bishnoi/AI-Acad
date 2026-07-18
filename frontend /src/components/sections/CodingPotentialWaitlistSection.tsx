@@ -5,24 +5,24 @@ import { FileCode, Braces, Terminal, Play, Square, Command } from "lucide-react"
 
 function CodeEditorMockup() {
   const codeLines = [
-    { num: 1, content: 'import ', color: 'text-pink-400' },
-    { num: 2, content: '  openai, os, json', color: 'text-blue-300' },
+    { num: 1, content: 'import ', color: 'text-[#FF7A8A]' },
+    { num: 2, content: '  openai, os, json', color: 'text-[#7FB0FF]' },
     { num: 3, content: '', color: '' },
     { num: 4, content: '# Configure API', color: 'text-gray-500' },
-    { num: 5, content: 'client = openai.', color: 'text-green-400' },
-    { num: 6, content: '  api_key=os.', color: 'text-blue-300' },
-    { num: 7, content: '    getenv(', color: 'text-yellow-300' },
-    { num: 8, content: '      "OPENAI_KEY"', color: 'text-orange-300' },
+    { num: 5, content: 'client = openai.', color: 'text-[#5B9DFF]' },
+    { num: 6, content: '  api_key=os.', color: 'text-[#7FB0FF]' },
+    { num: 7, content: '    getenv(', color: 'text-[#C4A6FF]' },
+    { num: 8, content: '      "OPENAI_KEY"', color: 'text-[#FF9FAC]' },
     { num: 9, content: '    )', color: 'text-gray-400' },
     { num: 10, content: ')', color: 'text-gray-400' },
     { num: 11, content: '', color: '' },
-    { num: 12, content: 'response = client.', color: 'text-green-400' },
-    { num: 13, content: '  chat.completions.', color: 'text-blue-300' },
-    { num: 14, content: '  create(', color: 'text-yellow-300' },
-    { num: 15, content: '    model="gpt-4o",', color: 'text-orange-300' },
-    { num: 16, content: '    messages=[{', color: 'text-pink-400' },
-    { num: 17, content: '      "role": "user",', color: 'text-orange-300' },
-    { num: 18, content: '      "content": prompt', color: 'text-blue-300' },
+    { num: 12, content: 'response = client.', color: 'text-[#5B9DFF]' },
+    { num: 13, content: '  chat.completions.', color: 'text-[#7FB0FF]' },
+    { num: 14, content: '  create(', color: 'text-[#C4A6FF]' },
+    { num: 15, content: '    model="gpt-4o",', color: 'text-[#FF9FAC]' },
+    { num: 16, content: '    messages=[{', color: 'text-[#FF7A8A]' },
+    { num: 17, content: '      "role": "user",', color: 'text-[#FF9FAC]' },
+    { num: 18, content: '      "content": prompt', color: 'text-[#7FB0FF]' },
     { num: 19, content: '    }]', color: 'text-gray-400' },
     { num: 20, content: '  )', color: 'text-gray-400' },
   ];
@@ -62,7 +62,7 @@ function CodeEditorMockup() {
           </div>
           <div className="flex items-center gap-2">
             <div className="px-2 py-1 bg-[#2a2a3c] rounded text-xs text-gray-400">IDEA</div>
-            <Play className="w-4 h-4 text-green-400" />
+            <Play className="w-4 h-4 text-[#5B9DFF]" />
             <Square className="w-3.5 h-3.5 text-gray-500" />
           </div>
         </div>
@@ -81,7 +81,7 @@ function CodeEditorMockup() {
                   : "text-gray-400 hover:text-gray-300 hover:bg-[#222233]"
                   }`}
               >
-                <span className={file.active ? "text-green-400" : ""}>{file.icon}</span>
+                <span className={file.active ? "text-[#5B9DFF]" : ""}>{file.icon}</span>
                 <span className="text-xs truncate">{file.name}</span>
               </div>
             ))}
@@ -91,8 +91,8 @@ function CodeEditorMockup() {
           <div className="flex-1 overflow-x-auto">
             {/* Tab bar */}
             <div className="flex items-center bg-[#1e1e2e] border-b border-gray-700/50">
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#1e1e2e] border-t-2 border-green-500">
-                <FileCode className="w-3.5 h-3.5 text-green-400" />
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#1e1e2e] border-t-2 border-[#155DFC]">
+                <FileCode className="w-3.5 h-3.5 text-[#5B9DFF]" />
                 <span className="text-xs text-gray-300">prompt_engine.py</span>
                 <span className="text-gray-500 ml-2">×</span>
               </div>
@@ -120,17 +120,17 @@ function CodeEditorMockup() {
 
 export default function CodingPotentialWaitlistSection() {
   const avatars = [
-    { bg: "bg-amber-200", initial: "A" },
-    { bg: "bg-blue-200", initial: "B" },
-    { bg: "bg-green-200", initial: "C" },
+    { bg: "bg-blue-200", initial: "A" },
+    { bg: "bg-rose-200", initial: "B" },
+    { bg: "bg-indigo-200", initial: "C" },
     { bg: "bg-purple-200", initial: "D" },
-    { bg: "bg-pink-200", initial: "E" },
+    { bg: "bg-sky-200", initial: "E" },
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gff-dark-green relative overflow-hidden">
-      <div className="absolute left-[-8rem] top-8 h-56 w-56 rounded-full bg-[#DFFBF1]/12 blur-3xl" />
-      <div className="absolute bottom-[-6rem] right-[-4rem] h-64 w-64 rounded-full bg-[#FFD9E8]/12 blur-3xl" />
+    <section className="py-16 md:py-24 bg-brand-navy relative overflow-hidden">
+      <div className="absolute left-[-8rem] top-8 h-56 w-56 rounded-full bg-[#155DFC]/20 blur-3xl" />
+      <div className="absolute bottom-[-6rem] right-[-4rem] h-64 w-64 rounded-full bg-[#D91F2D]/16 blur-3xl" />
 
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.04]">
@@ -162,10 +162,10 @@ export default function CodingPotentialWaitlistSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#E8EDE9] bg-[#F8FAF9] px-4 py-2"
+              className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#E4EAF5] bg-[#EEF6FF] px-4 py-2"
             >
-              <Terminal className="w-4 h-4 text-[#00A86B]" />
-              <span className="text-sm font-medium text-[#071C1A]">AI Course</span>
+              <Terminal className="w-4 h-4 text-[#155DFC]" />
+              <span className="text-sm font-medium text-[#07162F]">AI Course</span>
             </motion.div>
 
             {/* Heading */}
@@ -174,7 +174,7 @@ export default function CodingPotentialWaitlistSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="mb-6 text-4xl font-bold text-[#071C1A] md:text-5xl lg:text-6xl"
+              className="mb-6 text-4xl font-bold text-[#07162F] md:text-5xl lg:text-6xl"
             >
               Unlock Your Coding Potential
             </motion.h2>
@@ -185,7 +185,7 @@ export default function CodingPotentialWaitlistSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.25 }}
-              className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-[#5A6B69] md:text-lg"
+              className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-[#5D667A] md:text-lg"
             >
               Dive into the world of AI, programming, and real-world projects with a structured
               academy experience designed for beginners and aspiring AI professionals.
@@ -202,14 +202,14 @@ export default function CodingPotentialWaitlistSection() {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 rounded-full bg-[#062E2A] px-7 py-3.5 font-medium text-white shadow-lg shadow-black/15 transition-colors hover:bg-[#002B24]"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-gradient px-7 py-3.5 font-medium text-white shadow-lg shadow-[#155DFC]/25 transition-opacity hover:opacity-90"
               >
                 Join Waitlist
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 rounded-full border border-[#D7E0DC] bg-white px-7 py-3.5 font-medium text-[#071C1A] transition-colors hover:bg-[#F8FAF9]"
+                className="inline-flex items-center gap-2 rounded-full border border-[#DDE5F3] bg-white px-7 py-3.5 font-medium text-[#07162F] transition-colors hover:border-[#155DFC] hover:text-[#155DFC]"
               >
                 Contact
               </motion.button>
@@ -233,8 +233,8 @@ export default function CodingPotentialWaitlistSection() {
                   </div>
                 ))}
               </div>
-              <span className="text-sm text-[#5A6B69]">
-                Trusted already by <span className="font-semibold text-[#071C1A]">1.2k+</span> learners
+              <span className="text-sm text-[#5D667A]">
+                Trusted already by <span className="font-semibold text-[#07162F]">1.2k+</span> learners
               </span>
             </motion.div>
 

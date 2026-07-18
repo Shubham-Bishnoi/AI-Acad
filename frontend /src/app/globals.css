@@ -1,15 +1,38 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #F8FAF9;
-  --color-foreground: #071C1A;
+  --color-background: #F8FAFF;
+  --color-foreground: #07162F;
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 
-  --color-primary: #00A86B;
-  --color-primary-dark: #002B24;
-  --color-primary-darker: #062E2A;
+  /* --- GFF AI brand identity: red + blue + deep navy --- */
+  --color-brand-red: #D91F2D;
+  --color-brand-red-light: #E43A45;
+  --color-brand-red-bright: #EF3B4D;
+  --color-brand-blue: #155DFC;
+  --color-brand-blue-dark: #2563EB;
+  --color-brand-blue-light: #2F6BFF;
+  --color-brand-navy: #07162F;
+  --color-brand-navy-deep: #0B1026;
+  --color-brand-purple: #7C3AED;
+  --color-brand-purple-light: #9B5CF6;
+
+  /* Primary action colour (blue = trust/technology) */
+  --color-primary: #155DFC;
+  --color-primary-dark: #0F4BD8;
+  --color-primary-darker: #0B3BAE;
+
+  /* Soft poster-inspired surfaces */
+  --color-brand-soft-blue: #EEF6FF;
+  --color-brand-soft-red: #FFF3F7;
+  --color-brand-soft-lavender: #F6F1FF;
+  --color-surface: #EEF3FB;
+  --color-muted: #5D667A;
+  --color-border-soft: #E4EAF5;
+  --color-border-softer: #DDE5F3;
+
   --color-accent-pink: #FFD9E8;
-  --color-accent-mint: #DFFBF1;
+  --color-accent-mint: #EAF2FF;
   --color-accent-blue: #E6F1FF;
   --color-accent-lavender: #E8E0FF;
   --color-accent-cream: #FFF5E0;
@@ -25,53 +48,110 @@ html {
 }
 
 body {
-  background-color: #F8FAF9;
-  color: #071C1A;
+  background-color: #F8FAFF;
+  color: #07162F;
   font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom gradient backgrounds matching the reference */
+/* ==========================================================================
+   GFF AI brand utilities — red -> purple -> blue identity
+   ========================================================================== */
+
+/* Main brand gradient: energy (red) bridging to trust (blue) */
+.bg-brand-gradient {
+  background-image: linear-gradient(135deg, #D91F2D 0%, #7C3AED 45%, #155DFC 100%);
+}
+
+.bg-brand-gradient-hover:hover {
+  background-image: linear-gradient(135deg, #C41926 0%, #6D28D9 45%, #0F4BD8 100%);
+}
+
+/* Gradient text for headline highlights.
+   Uses a horizontal ramp so wide, short headings span the full
+   red -> purple -> blue range instead of sampling only the middle. */
+.text-brand-gradient {
+  background-image: linear-gradient(90deg, #D91F2D 0%, #7C3AED 50%, #155DFC 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Soft poster background: light icy blue + blush radial wash */
+.bg-brand-soft-gradient {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.12), transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba(217, 31, 45, 0.10), transparent 30%),
+    linear-gradient(135deg, #F8FAFF 0%, #F4F7FF 45%, #FFF3F7 100%);
+}
+
+.border-brand-soft {
+  border-color: #E4EAF5;
+}
+
+.shadow-brand-soft {
+  box-shadow: 0 8px 32px rgba(21, 93, 252, 0.10);
+}
+
+/* Thin red->blue divider line, as used across the poster */
+.divider-brand {
+  height: 2px;
+  background-image: linear-gradient(90deg, #D91F2D 0%, #7C3AED 50%, #155DFC 100%);
+}
+
+/* Custom gradient backgrounds — poster-inspired light futuristic washes */
 .gradient-hero {
-  background: linear-gradient(135deg, #DFFBF1 0%, #E6F1FF 40%, #FFD9E8 100%);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.12), transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba(217, 31, 45, 0.10), transparent 30%),
+    radial-gradient(circle at 60% 80%, rgba(124, 58, 237, 0.08), transparent 40%),
+    linear-gradient(135deg, #F8FAFF 0%, #F4F7FF 45%, #FFF3F7 100%);
 }
 
 .gradient-cta {
-  background: linear-gradient(135deg, #FFD9E8 0%, #E6F1FF 50%, #DFFBF1 100%);
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(217, 31, 45, 0.12), transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(21, 93, 252, 0.14), transparent 40%),
+    linear-gradient(135deg, #FFF3F7 0%, #F6F1FF 50%, #EEF6FF 100%);
 }
 
 .gradient-footer {
-  background: linear-gradient(135deg, #DFFBF1 0%, #E6F1FF 40%, #FFD9E8 100%);
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(21, 93, 252, 0.10), transparent 35%),
+    radial-gradient(circle at 85% 90%, rgba(217, 31, 45, 0.08), transparent 35%),
+    linear-gradient(135deg, #F8FAFF 0%, #F4F7FF 45%, #FFF3F7 100%);
 }
 
 .gradient-mint-pink {
-  background: linear-gradient(135deg, #DFFBF1 0%, #FFD9E8 100%);
+  background-image: linear-gradient(135deg, #EEF6FF 0%, #FFF3F7 100%);
 }
 
-/* Soft shadow for cards */
+/* Soft shadow for cards — navy-tinted to match the new palette */
 .shadow-soft {
-  box-shadow: 0 4px 24px rgba(7, 28, 26, 0.06);
+  box-shadow: 0 4px 24px rgba(7, 22, 47, 0.06);
 }
 
 .shadow-card {
-  box-shadow: 0 2px 16px rgba(7, 28, 26, 0.04);
+  box-shadow: 0 2px 16px rgba(7, 22, 47, 0.04);
 }
 
 .shadow-card-hover {
-  box-shadow: 0 16px 40px rgba(7, 28, 26, 0.12);
+  box-shadow: 0 16px 40px rgba(7, 22, 47, 0.12);
 }
 
 .shadow-soft-lg {
-  box-shadow: 0 18px 50px rgba(7, 28, 26, 0.12);
+  box-shadow: 0 18px 50px rgba(7, 22, 47, 0.12);
 }
 
 .shadow-hover {
-  box-shadow: 0 8px 32px rgba(7, 28, 26, 0.10);
+  box-shadow: 0 8px 32px rgba(7, 22, 47, 0.10);
 }
 
-.bg-gff-dark-green {
-  background-color: #062E2A;
+/* Deep navy contrast band (replaces the former dark-green band) */
+.bg-brand-navy {
+  background-color: #0B1026;
 }
 
 .pinstripe-bg {
@@ -88,16 +168,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F8FAF9;
+  background: #F8FAFF;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CBD5D1;
+  background: #C7D3E8;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3A0;
+  background: #94A3BE;
 }
 
 /* Animations */

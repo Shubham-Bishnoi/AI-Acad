@@ -53,7 +53,7 @@ function FAQItem({ item, isOpen, onClick }: { item: typeof faqItems[0]; isOpen: 
         onClick={onClick}
         className="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50/50 transition-colors"
       >
-        <span className={`text-sm md:text-base font-medium ${isOpen ? "text-green-600" : "text-gray-900"}`}>
+        <span className={`text-sm md:text-base font-medium ${isOpen ? "text-[#155DFC]" : "text-gray-900"}`}>
           {item.question}
         </span>
         <motion.div
@@ -61,7 +61,7 @@ function FAQItem({ item, isOpen, onClick }: { item: typeof faqItems[0]; isOpen: 
           transition={{ duration: 0.2 }}
           className="flex-shrink-0 ml-4"
         >
-          <ChevronDown className={`w-5 h-5 ${isOpen ? "text-green-600" : "text-gray-400"}`} />
+          <ChevronDown className={`w-5 h-5 ${isOpen ? "text-[#155DFC]" : "text-gray-400"}`} />
         </motion.div>
       </button>
       <motion.div
@@ -99,7 +99,7 @@ export default function HomeVersion2() {
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
                 Best AI Courses to{" "}
-                <span className="text-green-600">Expand Your</span>{" "}
+                <span className="text-brand-gradient">Expand Your</span>{" "}
                 Digital Abilities
               </h1>
               <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8 max-w-lg">
@@ -110,7 +110,7 @@ export default function HomeVersion2() {
                 <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-medium rounded-full hover:bg-green-700 transition-colors shadow-lg shadow-green-600/20"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#155DFC] text-white font-medium rounded-full hover:bg-[#0F4BD8] transition-colors shadow-lg shadow-[#155DFC]/20"
                 >
                   Explore Courses
                   <ArrowUpRight className="w-4 h-4" />
@@ -118,7 +118,7 @@ export default function HomeVersion2() {
                 <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-300 text-gray-700 font-medium rounded-full hover:border-green-600 hover:text-green-600 transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-300 text-gray-700 font-medium rounded-full hover:border-[#155DFC] hover:text-[#155DFC] transition-colors"
                 >
                   Apply Now
                 </motion.button>
@@ -128,7 +128,7 @@ export default function HomeVersion2() {
                   {[1, 2, 3, 4].map((i) => (
                     <div
                       key={i}
-                      className="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-white flex items-center justify-center"
+                      className="w-8 h-8 rounded-full bg-gradient-to-br from-[#2F6BFF] to-[#155DFC] border-2 border-white flex items-center justify-center"
                     >
                       <span className="text-xs font-medium text-white">{String.fromCharCode(64 + i)}</span>
                     </div>
@@ -164,7 +164,7 @@ export default function HomeVersion2() {
                     {[1, 2, 3].map((i) => (
                       <div
                         key={i}
-                        className="w-6 h-6 rounded-full bg-gradient-to-br from-green-400 to-green-600 border border-white"
+                        className="w-6 h-6 rounded-full bg-gradient-to-br from-[#2F6BFF] to-[#155DFC] border border-white"
                       />
                     ))}
                   </div>
@@ -175,7 +175,7 @@ export default function HomeVersion2() {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                className="absolute -bottom-6 -left-6 w-24 h-24 bg-green-600 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute -bottom-6 -left-6 w-24 h-24 bg-[#155DFC] rounded-full flex items-center justify-center shadow-lg"
               >
                 <div className="relative w-full h-full">
                   <svg className="w-full h-full" viewBox="0 0 100 100">
@@ -231,7 +231,7 @@ export default function HomeVersion2() {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${activeCategory === cat
-                  ? "bg-green-600 text-white shadow-md"
+                  ? "bg-[#155DFC] text-white shadow-md"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                   }`}
               >
@@ -279,10 +279,10 @@ export default function HomeVersion2() {
                     transition={{ delay: i * 0.1 }}
                     className="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm"
                   >
-                    <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
-                      {i === 0 && <Users className="w-5 h-5 text-green-600" />}
-                      {i === 1 && <GraduationCap className="w-5 h-5 text-green-600" />}
-                      {i === 2 && <TrendingUp className="w-5 h-5 text-green-600" />}
+                    <div className="w-10 h-10 rounded-full bg-[#EAF2FF] flex items-center justify-center flex-shrink-0">
+                      {i === 0 && <Users className="w-5 h-5 text-[#155DFC]" />}
+                      {i === 1 && <GraduationCap className="w-5 h-5 text-[#155DFC]" />}
+                      {i === 2 && <TrendingUp className="w-5 h-5 text-[#155DFC]" />}
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">{step.title}</h4>
@@ -334,8 +334,8 @@ export default function HomeVersion2() {
                 >
                   <p className="text-xs text-gray-500 mb-1">Average Class Completion Rate</p>
                   <div className="flex items-center gap-2 mb-2">
-                    <TrendingUp className="w-4 h-4 text-green-600" />
-                    <span className="text-xs font-medium text-green-600">65+</span>
+                    <TrendingUp className="w-4 h-4 text-[#155DFC]" />
+                    <span className="text-xs font-medium text-[#155DFC]">65+</span>
                   </div>
                   <p className="text-3xl font-bold text-gray-900">95%</p>
                 </motion.div>
@@ -352,11 +352,11 @@ export default function HomeVersion2() {
               <div className="grid sm:grid-cols-2 gap-6 mb-8">
                 {featuresV2.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center flex-shrink-0">
-                      {feature.icon === "Users" && <Users className="w-5 h-5 text-green-600" />}
-                      {feature.icon === "Award" && <Award className="w-5 h-5 text-green-600" />}
-                      {feature.icon === "Briefcase" && <Briefcase className="w-5 h-5 text-green-600" />}
-                      {feature.icon === "Headphones" && <Headphones className="w-5 h-5 text-green-600" />}
+                    <div className="w-10 h-10 rounded-xl bg-[#EAF2FF] flex items-center justify-center flex-shrink-0">
+                      {feature.icon === "Users" && <Users className="w-5 h-5 text-[#155DFC]" />}
+                      {feature.icon === "Award" && <Award className="w-5 h-5 text-[#155DFC]" />}
+                      {feature.icon === "Briefcase" && <Briefcase className="w-5 h-5 text-[#155DFC]" />}
+                      {feature.icon === "Headphones" && <Headphones className="w-5 h-5 text-[#155DFC]" />}
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">{feature.title}</h4>
@@ -378,7 +378,7 @@ export default function HomeVersion2() {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-medium rounded-full hover:bg-green-700 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#155DFC] text-white font-medium rounded-full hover:bg-[#0F4BD8] transition-colors"
               >
                 More About Us
                 <ArrowUpRight className="w-4 h-4" />
@@ -389,14 +389,14 @@ export default function HomeVersion2() {
       </section>
 
       {/* ===== MENTORS ===== */}
-      <section className="py-16 md:py-24 bg-gff-dark-green">
+      <section className="py-16 md:py-24 bg-brand-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
                 Learn from the Best Talent
               </h2>
-              <p className="text-green-200/70">in the Industry</p>
+              <p className="text-[#9DBBFF]/80">in the Industry</p>
             </div>
             <motion.button
               whileHover={{ scale: 1.03 }}
@@ -437,8 +437,8 @@ export default function HomeVersion2() {
                 <Quote className="w-10 h-10 text-gray-300 mb-4" />
                 <p className="text-gray-600 mb-6 leading-relaxed">{t.quote}</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-                    <span className="text-sm font-semibold text-green-700">
+                  <div className="w-10 h-10 rounded-full bg-[#EAF2FF] flex items-center justify-center">
+                    <span className="text-sm font-semibold text-[#0F4BD8]">
                       {t.name.split(" ").map((n) => n[0]).join("")}
                     </span>
                   </div>
@@ -487,7 +487,7 @@ export default function HomeVersion2() {
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
-              className="mt-4 md:mt-0 inline-flex items-center gap-2 px-5 py-2.5 bg-green-600 text-white font-medium rounded-full hover:bg-green-700 transition-colors"
+              className="mt-4 md:mt-0 inline-flex items-center gap-2 px-5 py-2.5 bg-[#155DFC] text-white font-medium rounded-full hover:bg-[#0F4BD8] transition-colors"
             >
               View All Blogs
               <ArrowUpRight className="w-4 h-4" />
@@ -514,7 +514,7 @@ export default function HomeVersion2() {
                 <p className="text-xs text-gray-500 mb-2">
                   {post.author} &bull; {post.readTime} read
                 </p>
-                <h3 className="text-base font-semibold text-gray-900 group-hover:text-green-600 transition-colors mb-2 line-clamp-2">
+                <h3 className="text-base font-semibold text-gray-900 group-hover:text-[#155DFC] transition-colors mb-2 line-clamp-2">
                   {post.title}
                 </h3>
                 <p className="text-sm text-gray-500 line-clamp-2">{post.excerpt}</p>
@@ -540,12 +540,12 @@ export default function HomeVersion2() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-5 py-3 rounded-full border border-gray-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="flex-1 px-5 py-3 rounded-full border border-gray-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#155DFC]"
                 />
                 <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="px-6 py-3 bg-green-600 text-white font-medium rounded-full hover:bg-green-700 transition-colors inline-flex items-center justify-center gap-2"
+                  className="px-6 py-3 bg-[#155DFC] text-white font-medium rounded-full hover:bg-[#0F4BD8] transition-colors inline-flex items-center justify-center gap-2"
                 >
                   Join With Us
                   <ArrowUpRight className="w-4 h-4" />

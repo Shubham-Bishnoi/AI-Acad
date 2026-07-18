@@ -30,7 +30,7 @@ export const mentors: Mentor[] = [
     tags: ["ML", "Python", "MLOps", "Product"],
     students: "1,800+",
     courses: 3,
-    bgColor: "#DFFBF1",
+    bgColor: "#EAF2FF",
     initials: "JW",
   },
   {
@@ -85,7 +85,7 @@ export const mentors: Mentor[] = [
     tags: ["Career", "Placement", "Interview Prep", "Coaching"],
     students: "4,000+",
     courses: 3,
-    bgColor: "#DFFBF1",
+    bgColor: "#EAF2FF",
     initials: "LW",
   },
   {

@@ -19,10 +19,10 @@ export default function CTASection() {
           <div className="absolute bottom-0 right-0 w-48 h-48 bg-white/30 rounded-full blur-2xl translate-x-1/3 translate-y-1/3" />
 
           <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#071C1A] leading-tight mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#07162F] leading-tight mb-4">
               Start Your AI Learning Journey With GFF AI Academy
             </h2>
-            <p className="text-sm sm:text-base text-[#5A6B69] mb-8 leading-relaxed">
+            <p className="text-sm sm:text-base text-[#5D667A] mb-8 leading-relaxed">
               Apply today and move through a structured path from learning to
               certification and placement readiness.
             </p>
@@ -34,11 +34,11 @@ export default function CTASection() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full sm:flex-1 px-5 py-3.5 rounded-full bg-white/80 backdrop-blur-sm border border-[#E5E5E5] text-sm text-[#071C1A] placeholder:text-[#A3A3A3] focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B] transition-all shadow-sm"
+                className="w-full sm:flex-1 px-5 py-3.5 rounded-full bg-white/80 backdrop-blur-sm border border-[#E4EAF5] text-sm text-[#07162F] placeholder:text-[#9AA3B5] focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC] transition-all shadow-sm"
               />
               <button
                 type="submit"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#00A86B] text-white text-sm font-semibold hover:bg-[#008F5A] transition-all group shadow-sm hover:shadow-md shrink-0"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-brand-gradient text-white text-sm font-semibold transition-all group shadow-sm hover:opacity-90 hover:shadow-md shrink-0"
               >
                 Join With Us
                 <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">

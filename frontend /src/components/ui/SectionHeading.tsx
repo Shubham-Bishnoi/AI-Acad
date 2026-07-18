@@ -26,16 +26,16 @@ export default function SectionHeading({
       className={`${centered ? "text-center" : ""} ${className}`}
     >
       {pill && (
-        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#DFFBF1] text-[#008F5A] text-sm font-medium mb-4">
-          <span className="w-2 h-2 rounded-full bg-[#00A86B]"></span>
+        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EAF2FF] text-[#0F4BD8] text-sm font-medium mb-4">
+          <span className="w-2 h-2 rounded-full bg-[#155DFC]"></span>
           {pill}
         </span>
       )}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#071C1A] leading-tight tracking-tight">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#07162F] leading-tight tracking-tight">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-base sm:text-lg text-[#5A6B69] max-w-2xl leading-relaxed">
+        <p className="mt-4 text-base sm:text-lg text-[#5D667A] max-w-2xl leading-relaxed">
           {subtitle}
         </p>
       )}

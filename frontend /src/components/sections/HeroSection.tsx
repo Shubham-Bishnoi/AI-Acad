@@ -6,19 +6,19 @@ import HeroBackground from "@/components/layout/HeroBackground";
 import PillButton from "@/components/ui/PillButton";
 
 const floatingIcons = [
-  { Icon: BookOpen, x: "8%", y: "20%", delay: 0, color: "#FFD9E8" },
-  { Icon: Sparkles, x: "85%", y: "15%", delay: 0.5, color: "#DFFBF1" },
-  { Icon: Brain, x: "12%", y: "65%", delay: 1, color: "#E6F1FF" },
-  { Icon: Code2, x: "90%", y: "60%", delay: 1.5, color: "#FFF5E0" },
+  { Icon: BookOpen, x: "8%", y: "20%", delay: 0, color: "#FFE4EC", fg: "#D91F2D" },
+  { Icon: Sparkles, x: "85%", y: "15%", delay: 0.5, color: "#EAF2FF", fg: "#155DFC" },
+  { Icon: Brain, x: "12%", y: "65%", delay: 1, color: "#F1EAFF", fg: "#7C3AED" },
+  { Icon: Code2, x: "90%", y: "60%", delay: 1.5, color: "#E6F1FF", fg: "#2563EB" },
 ];
 
-const avatarColors = ["#FFF5E0", "#FFD9E8", "#DFFBF1", "#E6F1FF", "#FFE8E0"];
+const avatarColors = ["#EAF2FF", "#FFE4EC", "#F1EAFF", "#E6F1FF", "#FFF3F7"];
 
 export default function HeroSection() {
   return (
     <HeroBackground className="flex min-h-screen items-center">
       {/* Floating decorative icons */}
-      {floatingIcons.map(({ Icon, x, y, delay, color }, i) => (
+      {floatingIcons.map(({ Icon, x, y, delay, color, fg }, i) => (
         <motion.div
           key={i}
           className="absolute hidden md:block"
@@ -34,7 +34,7 @@ export default function HeroSection() {
               animationDelay: `${delay}s`,
             }}
           >
-            <Icon className="w-5 h-5 lg:w-6 lg:h-6 text-[#071C1A]" />
+            <Icon className="w-5 h-5 lg:w-6 lg:h-6" style={{ color: fg }} />
           </div>
         </motion.div>
       ))}
@@ -47,8 +47,8 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#E5E5E5] bg-white/80 px-4 py-2 text-sm font-medium text-[#5A6B69] shadow-sm backdrop-blur-sm">
-              <Brain className="w-4 h-4 text-[#00A86B]" />
+            <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#E4EAF5] bg-white/80 px-4 py-2 text-sm font-medium text-[#5D667A] shadow-sm backdrop-blur-sm">
+              <Brain className="w-4 h-4 text-[#155DFC]" />
               Learn AI From Industry Experts
             </span>
           </motion.div>
@@ -58,10 +58,12 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mb-5 text-4xl font-bold leading-[1.1] tracking-tight text-[#071C1A] sm:text-5xl md:text-6xl lg:text-7xl"
+            className="mb-5 text-[1.9rem] font-bold leading-[1.12] tracking-tight text-[#07162F] sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Build Your Future With{" "}
-            <span className="text-[#00A86B]">GFF AI Academy</span>
+            <span className="block">Build Your Future With</span>
+            <span className="block whitespace-nowrap text-brand-gradient">
+              GFF AI Academy
+            </span>
           </motion.h1>
 
           {/* Subheading */}
@@ -69,7 +71,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mx-auto mb-6 max-w-2xl text-base leading-relaxed text-[#5A6B69] sm:text-lg"
+            className="mx-auto mb-6 max-w-2xl text-base leading-relaxed text-[#5D667A] sm:text-lg"
           >
             Master practical AI skills through structured learning, mentor-led
             guidance, real projects, certification, and placement readiness.
@@ -83,11 +85,11 @@ export default function HeroSection() {
             className="mx-auto mb-6 max-w-xl"
           >
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#A3A3A3]" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#9AA3B5]" />
               <input
                 type="text"
                 placeholder="Search AI, Python, ML, GenAI..."
-                className="w-full pl-12 pr-4 py-4 rounded-full bg-white/80 backdrop-blur-sm border border-[#E5E5E5] text-sm text-[#071C1A] placeholder:text-[#A3A3A3] focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B] transition-all shadow-sm"
+                className="w-full pl-12 pr-4 py-4 rounded-full bg-white/80 backdrop-blur-sm border border-[#E4EAF5] text-sm text-[#07162F] placeholder:text-[#9AA3B5] focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC] transition-all shadow-sm"
               />
             </div>
           </motion.div>
@@ -118,7 +120,7 @@ export default function HeroSection() {
               {avatarColors.map((color, i) => (
                 <div
                   key={i}
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-[#071C1A]"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-[#07162F]"
                   style={{ backgroundColor: color }}
                 >
                   <Users className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -132,11 +134,11 @@ export default function HeroSection() {
                     ★
                   </span>
                 ))}
-                <span className="text-[#A3A3A3] text-sm">★</span>
-                <span className="text-xs text-[#5A6B69] ml-1">4.8</span>
+                <span className="text-[#9AA3B5] text-sm">★</span>
+                <span className="text-xs text-[#5D667A] ml-1">4.8</span>
               </div>
-              <p className="text-xs text-[#5A6B69]">
-                <span className="font-semibold text-[#071C1A]">5,000+</span>{" "}
+              <p className="text-xs text-[#5D667A]">
+                <span className="font-semibold text-[#07162F]">5,000+</span>{" "}
                 students enrolled
               </p>
             </div>

@@ -154,7 +154,7 @@ function JourneyStep({
 
 export default function JourneySection() {
   return (
-    <section className="py-20 lg:py-28 bg-[#F8FAF9]">
+    <section className="py-20 lg:py-28 bg-[#F8FAFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left: Heading + Visual */}
@@ -172,7 +172,7 @@ export default function JourneySection() {
                 {
                   title: "Learn by Building",
                   desc: "Every concept is reinforced with hands-on projects",
-                  color: "#DFFBF1",
+                  color: "#EAF2FF",
                 },
                 {
                   title: "Track Your Progress",
@@ -190,16 +190,16 @@ export default function JourneySection() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="p-4 rounded-2xl border border-[#E8EDE9] bg-white"
+                  className="p-4 rounded-2xl border border-[#E4EAF5] bg-white"
                 >
                   <div
                     className="w-8 h-8 rounded-xl mb-2"
                     style={{ backgroundColor: card.color }}
                   />
-                  <h4 className="text-sm font-bold text-[#071C1A] mb-1">
+                  <h4 className="text-sm font-bold text-[#07162F] mb-1">
                     {card.title}
                   </h4>
-                  <p className="text-xs text-[#5A6B69]">{card.desc}</p>
+                  <p className="text-xs text-[#5D667A]">{card.desc}</p>
                 </motion.div>
               ))}
             </div>

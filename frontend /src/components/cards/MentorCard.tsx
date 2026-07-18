@@ -26,7 +26,7 @@ export default function MentorCard({ mentor, index = 0 }: MentorCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       </div>
       <h4 className="text-sm font-semibold text-white mb-1">{mentor.name}</h4>
-      <p className="text-xs text-green-200/80 mb-3">{mentor.role}</p>
+      <p className="text-xs text-[#9DBBFF]/90 mb-3">{mentor.role}</p>
       <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
         <button className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
           <Twitter className="w-3 h-3 text-white" />

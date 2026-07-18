@@ -3,13 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Menu,
-  X,
-  ArrowUpRight,
-  ChevronDown,
-  GraduationCap,
-} from "lucide-react";
+import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
 import clsx from "clsx";
 
 const homeMenuItems = [
@@ -89,27 +83,23 @@ export default function Navbar() {
             "flex items-center justify-between transition-all duration-300 ease-out",
             isTop
               ? "h-16 lg:h-[76px] bg-transparent border border-transparent shadow-none"
-              : "h-14 px-4 lg:h-[68px] lg:px-6 rounded-full border border-black/5 bg-white/85 shadow-[0_12px_40px_rgba(7,28,26,0.10)] backdrop-blur-xl",
+              : "h-14 px-4 lg:h-[68px] lg:px-6 rounded-full border border-black/5 bg-white/85 shadow-[0_12px_40px_rgba(7,22,47,0.10)] backdrop-blur-xl",
           )}
         >
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5">
-            <div
+          <Link href="/" className="flex items-center" aria-label="GFF AI Academy — home">
+            <img
+              src="/images/gff-ai-logo.png"
+              alt="GFF AI Academy"
+              width={792}
+              height={240}
               className={clsx(
-                "flex items-center justify-center rounded-xl bg-[#00A86B] transition-all duration-300",
-                isVisible ? "h-8 w-8" : "h-9 w-9",
+                "w-auto object-contain transition-all duration-300",
+                isVisible
+                  ? "h-[42px] max-w-[145px] sm:max-w-[155px] lg:h-11 lg:max-w-[185px]"
+                  : "h-11 max-w-[155px] sm:max-w-[165px] lg:h-[60px] lg:max-w-[200px]",
               )}
-            >
-              <GraduationCap className="w-5 h-5 text-white" />
-            </div>
-            <span
-              className={clsx(
-                "font-bold tracking-tight text-[#071C1A] transition-all duration-300",
-                isVisible ? "text-base lg:text-[17px]" : "text-lg",
-              )}
-            >
-              GFF AI Academy
-            </span>
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -123,8 +113,8 @@ export default function Navbar() {
                 type="button"
                 onClick={() => setIsHomeMenuOpen((prev) => !prev)}
                 className={clsx(
-                  "inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-[#5A6B69] transition-all duration-200 hover:text-[#071C1A]",
-                  isTop ? "hover:bg-white/55" : "hover:bg-[#F0F4F2]",
+                  "inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-[#5D667A] transition-all duration-200 hover:text-[#07162F]",
+                  isTop ? "hover:bg-white/60" : "hover:bg-[#EEF6FF]",
                 )}
                 aria-expanded={isHomeMenuOpen}
               >
@@ -144,14 +134,14 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute left-0 top-full mt-3 w-52 overflow-hidden rounded-3xl border border-black/5 bg-white/95 p-2 shadow-[0_18px_50px_rgba(7,28,26,0.12)] backdrop-blur-xl"
+                    className="absolute left-0 top-full mt-3 w-52 overflow-hidden rounded-3xl border border-black/5 bg-white/95 p-2 shadow-[0_18px_50px_rgba(7,22,47,0.12)] backdrop-blur-xl"
                   >
                     {homeMenuItems.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
                         onClick={() => setIsHomeMenuOpen(false)}
-                        className="block rounded-2xl px-4 py-3 text-sm font-medium text-[#5A6B69] transition-all hover:bg-[#F0F4F2] hover:text-[#071C1A]"
+                        className="block rounded-2xl px-4 py-3 text-sm font-medium text-[#5D667A] transition-all hover:bg-[#EEF6FF] hover:text-[#155DFC]"
                       >
                         {item.label}
                       </Link>
@@ -166,8 +156,8 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={clsx(
-                  "rounded-full px-4 py-2 text-sm font-medium text-[#5A6B69] transition-all duration-200 hover:text-[#071C1A]",
-                  isTop ? "hover:bg-white/55" : "hover:bg-[#F0F4F2]",
+                  "rounded-full px-4 py-2 text-sm font-medium text-[#5D667A] transition-all duration-200 hover:text-[#07162F]",
+                  isTop ? "hover:bg-white/60" : "hover:bg-[#EEF6FF]",
                 )}
               >
                 {link.label}
@@ -179,13 +169,13 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/login"
-              className="rounded-full px-5 py-2 text-sm font-medium text-[#5A6B69] transition-colors hover:text-[#071C1A]"
+              className="rounded-full px-5 py-2 text-sm font-medium text-[#5D667A] transition-colors hover:text-[#07162F]"
             >
               Student Login
             </Link>
             <Link
               href="/apply"
-              className="group inline-flex items-center gap-2 rounded-full bg-[#00A86B] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:bg-[#008F5A] hover:shadow-md"
+              className="group inline-flex items-center gap-2 rounded-full bg-brand-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:opacity-90 hover:shadow-md"
             >
               Apply Now
               <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">
@@ -199,13 +189,13 @@ export default function Navbar() {
             onClick={handleMobileMenuToggle}
             className={clsx(
               "rounded-xl p-2 transition-colors lg:hidden",
-              isTop ? "hover:bg-white/55" : "hover:bg-[#F0F4F2]",
+              isTop ? "hover:bg-white/60" : "hover:bg-[#EEF6FF]",
             )}
           >
             {isOpen ? (
-              <X className="w-5 h-5 text-[#071C1A]" />
+              <X className="w-5 h-5 text-[#07162F]" />
             ) : (
-              <Menu className="w-5 h-5 text-[#071C1A]" />
+              <Menu className="w-5 h-5 text-[#07162F]" />
             )}
           </button>
         </div>
@@ -219,14 +209,14 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="mx-4 mt-3 overflow-hidden rounded-3xl border border-black/5 bg-white/95 shadow-[0_18px_50px_rgba(7,28,26,0.12)] backdrop-blur-xl lg:hidden sm:mx-6 lg:mx-8"
+            className="mx-4 mt-3 overflow-hidden rounded-3xl border border-black/5 bg-white/95 shadow-[0_18px_50px_rgba(7,22,47,0.12)] backdrop-blur-xl lg:hidden sm:mx-6 lg:mx-8"
           >
             <div className="px-4 py-4 space-y-1">
               <div className="rounded-2xl">
                 <button
                   type="button"
                   onClick={() => setIsMobileHomeMenuOpen((prev) => !prev)}
-                  className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-[#5A6B69] transition-all hover:bg-[#F0F4F2] hover:text-[#071C1A]"
+                  className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-[#5D667A] transition-all hover:bg-[#EEF6FF] hover:text-[#155DFC]"
                   aria-expanded={isMobileHomeMenuOpen}
                 >
                   <span>Home</span>
@@ -247,7 +237,7 @@ export default function Navbar() {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                     >
-                      <div className="mt-1 space-y-1 rounded-2xl bg-[#F8FAF9] p-2">
+                      <div className="mt-1 space-y-1 rounded-2xl bg-[#F8FAFF] p-2">
                         {homeMenuItems.map((item) => (
                           <Link
                             key={item.href}
@@ -256,7 +246,7 @@ export default function Navbar() {
                               setIsMobileHomeMenuOpen(false);
                               setIsOpen(false);
                             }}
-                            className="block rounded-xl px-4 py-3 text-sm font-medium text-[#5A6B69] transition-all hover:bg-white hover:text-[#071C1A]"
+                            className="block rounded-xl px-4 py-3 text-sm font-medium text-[#5D667A] transition-all hover:bg-white hover:text-[#155DFC]"
                           >
                             {item.label}
                           </Link>
@@ -272,23 +262,23 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block px-4 py-3 rounded-xl text-sm font-medium text-[#5A6B69] hover:text-[#071C1A] hover:bg-[#F0F4F2] transition-all"
+                  className="block px-4 py-3 rounded-xl text-sm font-medium text-[#5D667A] hover:text-[#155DFC] hover:bg-[#EEF6FF] transition-all"
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="mt-3 space-y-2 border-t border-[#E8EDE9] pt-3">
+              <div className="mt-3 space-y-2 border-t border-[#E4EAF5] pt-3">
                 <Link
                   href="/login"
                   onClick={() => setIsOpen(false)}
-                  className="block px-4 py-3 rounded-xl text-sm font-medium text-center text-[#5A6B69] hover:bg-[#F0F4F2] transition-all"
+                  className="block px-4 py-3 rounded-xl text-sm font-medium text-center text-[#5D667A] hover:bg-[#EEF6FF] transition-all"
                 >
                   Student Login
                 </Link>
                 <Link
                   href="/apply"
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#00A86B] text-white text-sm font-semibold hover:bg-[#008F5A] transition-all"
+                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-brand-gradient text-white text-sm font-semibold transition-opacity hover:opacity-90"
                 >
                   Apply Now
                   <ArrowUpRight className="w-4 h-4" />

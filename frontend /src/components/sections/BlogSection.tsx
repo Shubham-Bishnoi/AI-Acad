@@ -11,7 +11,7 @@ const blogPosts = [
       "Explore the most in-demand AI skills that employers are looking for and how to develop them effectively.",
     author: "Dr. Sarah Chen",
     readTime: "8 min",
-    color: "#DFFBF1",
+    color: "#EAF2FF",
     featured: true,
   },
   {
@@ -57,7 +57,7 @@ export default function BlogSection() {
   const others = blogPosts.filter((p) => !p.featured);
 
   return (
-    <section className="py-20 lg:py-28 bg-[#F8FAF9]">
+    <section className="py-20 lg:py-28 bg-[#F8FAFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-10">
           <motion.div
@@ -65,7 +65,7 @@ export default function BlogSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#071C1A] leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#07162F] leading-tight">
               Empower Your Journey with
               <br />
               Expert Career Insights
@@ -73,7 +73,7 @@ export default function BlogSection() {
           </motion.div>
           <a
             href="#"
-            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#00A86B] text-white text-sm font-semibold hover:bg-[#008F5A] transition-all group"
+            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-gradient text-white text-sm font-semibold transition-all group hover:opacity-90"
           >
             View All Blogs
             <ArrowUpRight className="w-4 h-4" />
@@ -96,23 +96,23 @@ export default function BlogSection() {
                 style={{ backgroundColor: featured.color }}
               >
                 <div className="w-24 h-24 rounded-3xl bg-white/40 backdrop-blur-sm flex items-center justify-center border border-white/60 group-hover:scale-105 transition-transform">
-                  <BookOpen className="w-10 h-10 text-[#071C1A]/40" />
+                  <BookOpen className="w-10 h-10 text-[#07162F]/40" />
                 </div>
               </div>
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-xs text-[#5A6B69]">
+                <span className="text-xs text-[#5D667A]">
                   {featured.author}
                 </span>
                 <span className="text-[#D1D5DB]">·</span>
-                <span className="flex items-center gap-1 text-xs text-[#8B9A97]">
+                <span className="flex items-center gap-1 text-xs text-[#8B93A7]">
                   <Clock className="w-3 h-3" />
                   {featured.readTime}
                 </span>
               </div>
-              <h3 className="text-lg font-bold text-[#071C1A] group-hover:text-[#00A86B] transition-colors">
+              <h3 className="text-lg font-bold text-[#07162F] group-hover:text-[#155DFC] transition-colors">
                 {featured.title}
               </h3>
-              <p className="text-sm text-[#5A6B69] mt-1">{featured.excerpt}</p>
+              <p className="text-sm text-[#5D667A] mt-1">{featured.excerpt}</p>
             </motion.div>
           )}
 
@@ -132,20 +132,20 @@ export default function BlogSection() {
                   style={{ backgroundColor: post.color }}
                 >
                   <div className="w-12 h-12 rounded-xl bg-white/40 backdrop-blur-sm flex items-center justify-center border border-white/60 group-hover:scale-105 transition-transform">
-                    <BookOpen className="w-5 h-5 text-[#071C1A]/40" />
+                    <BookOpen className="w-5 h-5 text-[#07162F]/40" />
                   </div>
                 </div>
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-[10px] text-[#5A6B69]">
+                  <span className="text-[10px] text-[#5D667A]">
                     {post.author}
                   </span>
                   <span className="text-[#D1D5DB]">·</span>
-                  <span className="flex items-center gap-1 text-[10px] text-[#8B9A97]">
+                  <span className="flex items-center gap-1 text-[10px] text-[#8B93A7]">
                     <Clock className="w-2.5 h-2.5" />
                     {post.readTime}
                   </span>
                 </div>
-                <h3 className="text-xs sm:text-sm font-bold text-[#071C1A] group-hover:text-[#00A86B] transition-colors line-clamp-2">
+                <h3 className="text-xs sm:text-sm font-bold text-[#07162F] group-hover:text-[#155DFC] transition-colors line-clamp-2">
                   {post.title}
                 </h3>
               </motion.div>

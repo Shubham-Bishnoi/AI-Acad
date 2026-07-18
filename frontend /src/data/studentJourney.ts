@@ -128,7 +128,7 @@ export const statusColors = {
   locked: {
     bg: "#F5F5F5",
     text: "#737373",
-    border: "#E5E5E5",
-    dot: "#A3A3A3",
+    border: "#E4EAF5",
+    dot: "#9AA3B5",
   },
 };

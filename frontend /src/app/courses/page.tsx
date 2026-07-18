@@ -37,7 +37,7 @@ function CourseDetailModal({
             alt={course.title}
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#071C1A]/28 via-transparent to-white/12" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#07162F]/28 via-transparent to-white/12" />
           <button
             onClick={onClose}
             className="absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 transition-colors hover:bg-white"
@@ -49,39 +49,39 @@ function CourseDetailModal({
         {/* Content */}
         <div className="p-6 lg:p-8">
           <div className="flex items-center gap-3 mb-3">
-            <span className="px-3 py-1 rounded-full bg-[#F0F4F2] text-xs font-medium text-[#5A6B69]">
+            <span className="px-3 py-1 rounded-full bg-[#EEF3FB] text-xs font-medium text-[#5D667A]">
               {course.category}
             </span>
-            <span className="px-3 py-1 rounded-full bg-[#DFFBF1] text-xs font-medium text-[#008F5A]">
+            <span className="px-3 py-1 rounded-full bg-[#EAF2FF] text-xs font-medium text-[#0F4BD8]">
               {course.level}
             </span>
           </div>
-          <h2 className="text-2xl font-bold text-[#071C1A] mb-3">
+          <h2 className="text-2xl font-bold text-[#07162F] mb-3">
             {course.title}
           </h2>
-          <p className="text-sm text-[#5A6B69] leading-relaxed mb-5">
+          <p className="text-sm text-[#5D667A] leading-relaxed mb-5">
             {course.description}
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-6 pb-6 border-b border-[#E8EDE9]">
-            <span className="flex items-center gap-1.5 text-sm text-[#5A6B69]">
-              <Clock className="w-4 h-4 text-[#00A86B]" />
+          <div className="flex flex-wrap gap-4 mb-6 pb-6 border-b border-[#E4EAF5]">
+            <span className="flex items-center gap-1.5 text-sm text-[#5D667A]">
+              <Clock className="w-4 h-4 text-[#155DFC]" />
               {course.duration}
             </span>
-            <span className="flex items-center gap-1.5 text-sm text-[#5A6B69]">
-              <BookOpen className="w-4 h-4 text-[#00A86B]" />
+            <span className="flex items-center gap-1.5 text-sm text-[#5D667A]">
+              <BookOpen className="w-4 h-4 text-[#155DFC]" />
               {course.sessions} sessions
             </span>
           </div>
 
           {/* Tags */}
           <div className="mb-6">
-            <h4 className="text-sm font-bold text-[#071C1A] mb-3">What you will get</h4>
+            <h4 className="text-sm font-bold text-[#07162F] mb-3">What you will get</h4>
             <div className="flex flex-wrap gap-2">
               {course.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium bg-[#DFFBF1] text-[#008F5A]"
+                  className="flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium bg-[#EAF2FF] text-[#0F4BD8]"
                 >
                   <CheckCircle2 className="w-3 h-3" />
                   {tag}
@@ -93,16 +93,16 @@ function CourseDetailModal({
           {/* Curriculum */}
           {course.curriculum && (
             <div className="mb-6">
-              <h4 className="text-sm font-bold text-[#071C1A] mb-3">
+              <h4 className="text-sm font-bold text-[#07162F] mb-3">
                 Curriculum Highlights
               </h4>
               <ul className="space-y-2">
                 {course.curriculum.map((item, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-2 text-sm text-[#5A6B69]"
+                    className="flex items-start gap-2 text-sm text-[#5D667A]"
                   >
-                    <span className="w-5 h-5 rounded-full bg-[#DFFBF1] text-[#00A86B] text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="w-5 h-5 rounded-full bg-[#EAF2FF] text-[#155DFC] text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">
                       {i + 1}
                     </span>
                     {item}
@@ -114,7 +114,7 @@ function CourseDetailModal({
 
           <a
             href="/apply"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#00A86B] text-white text-sm font-semibold hover:bg-[#008F5A] transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#155DFC] text-white text-sm font-semibold hover:bg-[#0F4BD8] transition-all"
           >
             Apply for This Course
             <ArrowUpRight className="w-4 h-4" />
@@ -152,13 +152,13 @@ export default function CoursesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <p className="text-sm text-[#5A6B69] mb-2">
+              <p className="text-sm text-[#5D667A] mb-2">
                 Home / Courses
               </p>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#071C1A] mb-4">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#07162F] mb-4">
                 Explore Our Courses
               </h1>
-              <p className="text-base text-[#5A6B69] max-w-xl">
+              <p className="text-base text-[#5D667A] max-w-xl">
                 Industry-aligned AI courses designed to take you from beginner to
                 job-ready professional.
               </p>
@@ -172,13 +172,13 @@ export default function CoursesPage() {
             {/* Search */}
             <div className="max-w-md mx-auto mb-8">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#A3A3A3]" />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#9AA3B5]" />
                 <input
                   type="text"
                   placeholder="Search courses..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 rounded-full bg-[#F8FAF9] border border-[#E8EDE9] text-sm text-[#071C1A] placeholder:text-[#A3A3A3] focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B] transition-all"
+                  className="w-full pl-12 pr-4 py-3 rounded-full bg-[#F8FAFF] border border-[#E4EAF5] text-sm text-[#07162F] placeholder:text-[#9AA3B5] focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC] transition-all"
                 />
               </div>
             </div>
@@ -190,8 +190,8 @@ export default function CoursesPage() {
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeCategory === cat
-                    ? "bg-[#00A86B] text-white shadow-sm"
-                    : "bg-[#F0F4F2] text-[#5A6B69] hover:bg-[#E8EDE9]"
+                    ? "bg-[#155DFC] text-white shadow-sm"
+                    : "bg-[#EEF3FB] text-[#5D667A] hover:bg-[#E4EAF5]"
                     }`}
                 >
                   {cat}
@@ -209,7 +209,7 @@ export default function CoursesPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.06 }}
                   onClick={() => setSelectedCourse(course)}
-                  className="bg-[#F8FAF9] rounded-2xl border border-[#E8EDE9] overflow-hidden hover:shadow-hover transition-all duration-300 group cursor-pointer"
+                  className="bg-[#F8FAFF] rounded-2xl border border-[#E4EAF5] overflow-hidden hover:shadow-hover transition-all duration-300 group cursor-pointer"
                 >
                   <div className="relative h-40 overflow-hidden">
                     <img
@@ -217,30 +217,30 @@ export default function CoursesPage() {
                       alt={course.title}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#071C1A]/26 via-transparent to-white/10" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#07162F]/26 via-transparent to-white/10" />
                     {course.popular && (
-                      <span className="absolute top-3 right-3 inline-flex items-center gap-1 px-2 py-1 rounded-full bg-[#071C1A] text-white text-[10px] font-medium">
+                      <span className="absolute top-3 right-3 inline-flex items-center gap-1 px-2 py-1 rounded-full bg-[#07162F] text-white text-[10px] font-medium">
                         <Flame className="w-3 h-3 text-orange-400" />
                         Popular
                       </span>
                     )}
                   </div>
                   <div className="p-5">
-                    <span className="text-xs font-medium text-[#00A86B]">
+                    <span className="text-xs font-medium text-[#155DFC]">
                       {course.category}
                     </span>
-                    <h3 className="text-base font-bold text-[#071C1A] mt-1 mb-2 group-hover:text-[#00A86B] transition-colors">
+                    <h3 className="text-base font-bold text-[#07162F] mt-1 mb-2 group-hover:text-[#155DFC] transition-colors">
                       {course.title}
                     </h3>
-                    <p className="text-xs text-[#5A6B69] line-clamp-2 mb-3">
+                    <p className="text-xs text-[#5D667A] line-clamp-2 mb-3">
                       {course.description}
                     </p>
                     <div className="flex items-center gap-3">
-                      <span className="flex items-center gap-1 text-xs text-[#8B9A97]">
+                      <span className="flex items-center gap-1 text-xs text-[#8B93A7]">
                         <Clock className="w-3 h-3" />
                         {course.duration}
                       </span>
-                      <span className="flex items-center gap-1 text-xs text-[#8B9A97]">
+                      <span className="flex items-center gap-1 text-xs text-[#8B93A7]">
                         <BookOpen className="w-3 h-3" />
                         {course.sessions} sessions
                       </span>
@@ -252,7 +252,7 @@ export default function CoursesPage() {
 
             {filtered.length === 0 && (
               <div className="text-center py-16">
-                <p className="text-[#5A6B69]">
+                <p className="text-[#5D667A]">
                   No courses found. Try adjusting your filters.
                 </p>
               </div>

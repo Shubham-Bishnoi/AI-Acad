@@ -19,11 +19,11 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <p className="text-sm text-[#5A6B69] mb-2">Home / Contact</p>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#071C1A]">
+              <p className="text-sm text-[#5D667A] mb-2">Home / Contact</p>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#07162F]">
                 Have Any Questions!
                 <br />
-                <span className="text-[#00A86B]">Send a Message</span>
+                <span className="text-[#155DFC]">Send a Message</span>
               </h1>
             </motion.div>
           </div>
@@ -45,48 +45,48 @@ export default function ContactPage() {
                   className="space-y-4"
                 >
                   <div>
-                    <label className="block text-sm font-medium text-[#071C1A] mb-1.5">
+                    <label className="block text-sm font-medium text-[#07162F] mb-1.5">
                       Full Name
                     </label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 rounded-xl bg-[#F8FAF9] border border-[#E8EDE9] text-sm text-[#071C1A] placeholder:text-[#A3A3A3] focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B] transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-[#F8FAFF] border border-[#E4EAF5] text-sm text-[#07162F] placeholder:text-[#9AA3B5] focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC] transition-all"
                       placeholder="Your full name"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-[#071C1A] mb-1.5">
+                    <label className="block text-sm font-medium text-[#07162F] mb-1.5">
                       Phone Number
                     </label>
                     <input
                       type="tel"
-                      className="w-full px-4 py-3 rounded-xl bg-[#F8FAF9] border border-[#E8EDE9] text-sm text-[#071C1A] placeholder:text-[#A3A3A3] focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B] transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-[#F8FAFF] border border-[#E4EAF5] text-sm text-[#07162F] placeholder:text-[#9AA3B5] focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC] transition-all"
                       placeholder="+91 98765 43210"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-[#071C1A] mb-1.5">
+                    <label className="block text-sm font-medium text-[#07162F] mb-1.5">
                       Email Address
                     </label>
                     <input
                       type="email"
-                      className="w-full px-4 py-3 rounded-xl bg-[#F8FAF9] border border-[#E8EDE9] text-sm text-[#071C1A] placeholder:text-[#A3A3A3] focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B] transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-[#F8FAFF] border border-[#E4EAF5] text-sm text-[#07162F] placeholder:text-[#9AA3B5] focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC] transition-all"
                       placeholder="you@example.com"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-[#071C1A] mb-1.5">
+                    <label className="block text-sm font-medium text-[#07162F] mb-1.5">
                       Message
                     </label>
                     <textarea
                       rows={5}
-                      className="w-full px-4 py-3 rounded-xl bg-[#F8FAF9] border border-[#E8EDE9] text-sm text-[#071C1A] placeholder:text-[#A3A3A3] focus:outline-none focus:ring-2 focus:ring-[#00A86B]/30 focus:border-[#00A86B] transition-all resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-[#F8FAFF] border border-[#E4EAF5] text-sm text-[#07162F] placeholder:text-[#9AA3B5] focus:outline-none focus:ring-2 focus:ring-[#155DFC]/30 focus:border-[#155DFC] transition-all resize-none"
                       placeholder="How can we help you?"
                     />
                   </div>
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#002B24] text-white text-sm font-semibold hover:bg-[#062E2A] transition-all"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#07162F] text-white text-sm font-semibold hover:bg-[#0B1026] transition-all"
                   >
                     Send Message
                     <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
@@ -105,12 +105,12 @@ export default function ContactPage() {
                 className="space-y-6"
               >
                 {/* Image card */}
-                <div className="rounded-3xl bg-gradient-to-br from-[#DFFBF1] to-[#E6F1FF] h-64 flex items-center justify-center">
+                <div className="rounded-3xl bg-gradient-to-br from-[#EAF2FF] to-[#E6F1FF] h-64 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-16 h-16 rounded-2xl bg-white/50 backdrop-blur-sm flex items-center justify-center mx-auto mb-3 border border-white/60">
-                      <Mail className="w-7 h-7 text-[#00A86B]" />
+                      <Mail className="w-7 h-7 text-[#155DFC]" />
                     </div>
-                    <p className="text-sm font-medium text-[#071C1A]">
+                    <p className="text-sm font-medium text-[#07162F]">
                       We typically respond within 24 hours
                     </p>
                   </div>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                       icon: Phone,
                       label: "Phone",
                       value: "+91 98765 43210",
-                      color: "#DFFBF1",
+                      color: "#EAF2FF",
                     },
                     {
                       icon: Mail,
@@ -140,16 +140,16 @@ export default function ContactPage() {
                   ].map((item) => (
                     <div
                       key={item.label}
-                      className="p-4 rounded-2xl bg-[#F8FAF9] border border-[#E8EDE9] text-center"
+                      className="p-4 rounded-2xl bg-[#F8FAFF] border border-[#E4EAF5] text-center"
                     >
                       <div
                         className="w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-2"
                         style={{ backgroundColor: item.color }}
                       >
-                        <item.icon className="w-5 h-5 text-[#071C1A]" />
+                        <item.icon className="w-5 h-5 text-[#07162F]" />
                       </div>
-                      <p className="text-xs text-[#5A6B69]">{item.label}</p>
-                      <p className="text-xs font-semibold text-[#071C1A] mt-0.5">
+                      <p className="text-xs text-[#5D667A]">{item.label}</p>
+                      <p className="text-xs font-semibold text-[#07162F] mt-0.5">
                         {item.value}
                       </p>
                     </div>

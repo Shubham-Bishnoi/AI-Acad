@@ -36,12 +36,12 @@ export default function PillButton({
 
   const variantStyles = {
     primary:
-      "bg-[#00A86B] text-white hover:bg-[#008F5A] shadow-sm hover:shadow-md",
+      "bg-brand-gradient text-white shadow-sm transition-opacity hover:opacity-90 hover:shadow-md",
     secondary:
-      "bg-white text-[#071C1A] border border-[#E5E5E5] hover:border-[#00A86B] hover:text-[#00A86B] shadow-sm hover:shadow-md",
+      "bg-white text-[#07162F] border border-[#E4EAF5] hover:border-[#155DFC] hover:text-[#155DFC] shadow-sm hover:shadow-md",
     outline:
-      "bg-transparent text-[#071C1A] border-2 border-[#071C1A] hover:bg-[#071C1A] hover:text-white",
-    dark: "bg-[#002B24] text-white hover:bg-[#062E2A] shadow-sm hover:shadow-md",
+      "bg-transparent text-[#07162F] border-2 border-[#07162F] hover:bg-[#07162F] hover:text-white",
+    dark: "bg-[#07162F] text-white hover:bg-[#0B1026] shadow-sm hover:shadow-md",
   };
 
   const arrowSizes = {
@@ -58,7 +58,7 @@ export default function PillButton({
           className={`${arrowSizes[size]} rounded-full flex items-center justify-center ${
             variant === "primary" || variant === "dark"
               ? "bg-white/20"
-              : "bg-[#071C1A] group-hover:bg-white/20"
+              : "bg-[#07162F] group-hover:bg-white/20"
           } transition-colors`}
         >
           <ArrowUpRight

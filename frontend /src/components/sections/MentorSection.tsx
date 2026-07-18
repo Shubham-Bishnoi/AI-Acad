@@ -12,25 +12,25 @@ function MentorCard({ mentor, index }: { mentor: (typeof mentors)[0]; index: num
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="bg-white rounded-3xl border border-[#E8EDE9] p-6 text-center shadow-soft hover:shadow-hover transition-all duration-300 group"
+      className="bg-white rounded-3xl border border-[#E4EAF5] p-6 text-center shadow-soft hover:shadow-hover transition-all duration-300 group"
     >
       {/* Avatar with colored background */}
       <div
-        className="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center text-xl font-bold text-[#071C1A] group-hover:scale-105 transition-transform"
+        className="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center text-xl font-bold text-[#07162F] group-hover:scale-105 transition-transform"
         style={{ backgroundColor: mentor.bgColor }}
       >
         {mentor.initials}
       </div>
 
-      <h3 className="text-base font-bold text-[#071C1A] mb-1">{mentor.name}</h3>
-      <p className="text-xs text-[#5A6B69] mb-4">{mentor.role}</p>
+      <h3 className="text-base font-bold text-[#07162F] mb-1">{mentor.name}</h3>
+      <p className="text-xs text-[#5D667A] mb-4">{mentor.role}</p>
 
       {/* Tags */}
       <div className="flex flex-wrap justify-center gap-1.5">
         {mentor.tags.map((tag) => (
           <span
             key={tag}
-            className="px-3 py-1 rounded-full text-[11px] font-medium bg-[#F0F4F2] text-[#5A6B69]"
+            className="px-3 py-1 rounded-full text-[11px] font-medium bg-[#EEF3FB] text-[#5D667A]"
           >
             {tag}
           </span>
@@ -42,7 +42,7 @@ function MentorCard({ mentor, index }: { mentor: (typeof mentors)[0]; index: num
 
 export default function MentorSection() {
   return (
-    <section className="py-20 lg:py-28 bg-[#F8FAF9]">
+    <section className="py-20 lg:py-28 bg-[#F8FAFF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Meet the Next Generation of Masterful Mentors"
@@ -64,7 +64,7 @@ export default function MentorSection() {
         >
           <a
             href="/mentors"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#00A86B] text-white text-sm font-semibold hover:bg-[#008F5A] transition-all group shadow-sm hover:shadow-md"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-gradient text-white text-sm font-semibold transition-all group shadow-sm hover:opacity-90 hover:shadow-md"
           >
             View All Mentors
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

@@ -119,7 +119,7 @@ export const categories = [
 
 export const mentors: Mentor[] = [
   { id: "1", name: "Dr. Sarah Chen", role: "AI Research Lead", bgColor: "bg-amber-100" },
-  { id: "2", name: "Prof. Michael Park", role: "ML Engineer", bgColor: "bg-green-100" },
+  { id: "2", name: "Prof. Michael Park", role: "ML Engineer", bgColor: "bg-blue-100" },
   { id: "3", name: "Alex Thompson", role: "Gen AI Specialist", bgColor: "bg-pink-100" },
   { id: "4", name: "Dr. James Wilson", role: "AI Architect", bgColor: "bg-blue-100" },
   { id: "5", name: "Lisa Rodriguez", role: "Data Scientist", bgColor: "bg-purple-100" },
@@ -268,7 +268,7 @@ export const featuresV3 = [
     title: "Get your dream job",
     description: "Achieve your dream career by building essential AI skills, enhancing your resume, and mastering interviews.",
     action: "Get Started",
-    bgColor: "bg-green-50",
+    bgColor: "bg-blue-50",
   },
 ];
 

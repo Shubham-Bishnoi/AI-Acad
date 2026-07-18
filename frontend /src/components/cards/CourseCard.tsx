@@ -34,9 +34,9 @@ export default function CourseCard({ course, index = 0, variant = "default" }: C
             <span className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-700 rounded-full">
               {course.category}
             </span>
-            <span className="text-sm font-semibold text-green-600">{course.price}</span>
+            <span className="text-sm font-semibold text-[#155DFC]">{course.price}</span>
           </div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+          <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-[#155DFC] transition-colors">
             {course.title}
           </h3>
           <div className="flex items-center gap-4 text-sm text-gray-500">
@@ -77,7 +77,7 @@ export default function CourseCard({ course, index = 0, variant = "default" }: C
           </div>
         </div>
         <div className="p-5">
-          <h3 className="text-base font-semibold text-gray-900 mb-3 group-hover:text-green-600 transition-colors line-clamp-2">
+          <h3 className="text-base font-semibold text-gray-900 mb-3 group-hover:text-[#155DFC] transition-colors line-clamp-2">
             {course.title}
           </h3>
           <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
@@ -92,14 +92,14 @@ export default function CourseCard({ course, index = 0, variant = "default" }: C
           </div>
           <div className="flex items-center justify-between pt-3 border-t border-gray-100">
             <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
-                <span className="text-xs font-medium text-green-700">
+              <div className="w-6 h-6 rounded-full bg-[#EAF2FF] flex items-center justify-center">
+                <span className="text-xs font-medium text-[#0F4BD8]">
                   {course.instructor?.charAt(0) || "G"}
                 </span>
               </div>
               <span className="text-xs text-gray-600">{course.instructor}</span>
             </div>
-            <span className="text-sm font-semibold text-green-600">{course.price}</span>
+            <span className="text-sm font-semibold text-[#155DFC]">{course.price}</span>
           </div>
         </div>
       </motion.div>
@@ -127,9 +127,9 @@ export default function CourseCard({ course, index = 0, variant = "default" }: C
           <span className="px-2.5 py-0.5 text-xs font-medium bg-gray-100 text-gray-600 rounded-full">
             {course.category}
           </span>
-          <span className="text-sm font-semibold text-green-600">{course.price}</span>
+          <span className="text-sm font-semibold text-[#155DFC]">{course.price}</span>
         </div>
-        <h3 className="text-sm font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors line-clamp-2">
+        <h3 className="text-sm font-semibold text-gray-900 mb-2 group-hover:text-[#155DFC] transition-colors line-clamp-2">
           {course.title}
         </h3>
         <div className="flex items-center gap-3 text-xs text-gray-500">

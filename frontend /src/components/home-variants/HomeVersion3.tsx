@@ -78,13 +78,13 @@ export default function HomeVersion3() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="e.g. AI Development"
-                  className="w-full pl-10 pr-4 py-3 rounded-full border border-gray-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-pink-400 shadow-sm"
+                  className="w-full pl-10 pr-4 py-3 rounded-full border border-gray-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#155DFC] shadow-sm"
                 />
               </div>
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-6 py-3 bg-pink-500 text-white font-medium rounded-full hover:bg-pink-600 transition-colors shadow-lg shadow-pink-500/20"
+                className="px-6 py-3 bg-brand-gradient text-white font-medium rounded-full transition-opacity hover:opacity-90 shadow-lg shadow-[#155DFC]/20"
               >
                 Find Courses
               </motion.button>
@@ -93,14 +93,14 @@ export default function HomeVersion3() {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-600 text-white font-medium rounded-full hover:bg-green-700 transition-colors text-sm"
+                className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#155DFC] text-white font-medium rounded-full hover:bg-[#0F4BD8] transition-colors text-sm"
               >
                 Start Learning
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-6 py-2.5 border-2 border-gray-300 text-gray-700 font-medium rounded-full hover:border-green-600 hover:text-green-600 transition-colors text-sm"
+                className="inline-flex items-center gap-2 px-6 py-2.5 border-2 border-gray-300 text-gray-700 font-medium rounded-full hover:border-[#155DFC] hover:text-[#155DFC] transition-colors text-sm"
               >
                 View Courses
               </motion.button>
@@ -110,7 +110,7 @@ export default function HomeVersion3() {
       </HeroBackground>
 
       {/* ===== MARQUEE ===== */}
-      <section className="py-4 bg-pink-100/80 overflow-hidden">
+      <section className="py-4 bg-[#FFF3F7] overflow-hidden">
         <div className="relative">
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
@@ -120,7 +120,7 @@ export default function HomeVersion3() {
             {[...marqueeItems, ...marqueeItems].map((item, i) => (
               <span key={i} className="inline-flex items-center mx-8 text-lg md:text-xl font-semibold text-gray-800">
                 {item}
-                <span className="ml-8 w-2 h-2 rounded-full bg-pink-400" />
+                <span className="ml-8 w-2 h-2 rounded-full bg-[#D91F2D]" />
               </span>
             ))}
           </motion.div>
@@ -140,7 +140,7 @@ export default function HomeVersion3() {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${activeCategory === cat
-                  ? "bg-pink-500 text-white shadow-md"
+                  ? "bg-[#155DFC] text-white shadow-md"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                   }`}
               >
@@ -167,7 +167,7 @@ export default function HomeVersion3() {
       </section>
 
       {/* ===== WHY CHOOSE US - PINK BG ===== */}
-      <section className="py-16 md:py-24 bg-pink-50/60">
+      <section className="py-16 md:py-24 bg-[#FFF3F7]/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <FadeIn>
@@ -186,8 +186,8 @@ export default function HomeVersion3() {
                 >
                   <p className="text-xs text-gray-500 mb-1">Average Class Completion Rate</p>
                   <div className="flex items-center gap-2 mb-2">
-                    <TrendingUp className="w-4 h-4 text-pink-500" />
-                    <span className="text-xs font-medium text-pink-500">65+</span>
+                    <TrendingUp className="w-4 h-4 text-[#D91F2D]" />
+                    <span className="text-xs font-medium text-[#D91F2D]">65+</span>
                   </div>
                   <p className="text-3xl font-bold text-gray-900">95%</p>
                 </motion.div>
@@ -209,8 +209,8 @@ export default function HomeVersion3() {
                   { icon: Headphones, title: "Lifetime Support", desc: "Continuous online support for students for ultimate success." },
                 ].map((f, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-pink-100 flex items-center justify-center flex-shrink-0">
-                      <f.icon className="w-5 h-5 text-pink-600" />
+                    <div className="w-10 h-10 rounded-xl bg-[#FFE4EC] flex items-center justify-center flex-shrink-0">
+                      <f.icon className="w-5 h-5 text-[#D91F2D]" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">{f.title}</h4>
@@ -222,7 +222,7 @@ export default function HomeVersion3() {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-pink-500 text-white font-medium rounded-full hover:bg-pink-600 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#D91F2D] text-white font-medium rounded-full hover:bg-[#C41926] transition-colors"
               >
                 Explore Courses
                 <ArrowUpRight className="w-4 h-4" />
@@ -247,7 +247,7 @@ export default function HomeVersion3() {
                 <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center gap-1 text-sm font-medium text-gray-900 hover:text-green-600 transition-colors"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-gray-900 hover:text-[#155DFC] transition-colors"
                 >
                   {feature.action}
                   <ArrowRight className="w-4 h-4" />
@@ -259,14 +259,14 @@ export default function HomeVersion3() {
       </section>
 
       {/* ===== MENTORS ===== */}
-      <section className="py-16 md:py-24 bg-gff-dark-green">
+      <section className="py-16 md:py-24 bg-brand-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
                 Learn from the Best Talent
               </h2>
-              <p className="text-green-200/70">in the Industry</p>
+              <p className="text-[#9DBBFF]/80">in the Industry</p>
             </div>
             <motion.button
               whileHover={{ scale: 1.03 }}
@@ -307,8 +307,8 @@ export default function HomeVersion3() {
                 <Quote className="w-10 h-10 text-gray-300 mb-4" />
                 <p className="text-gray-600 mb-6 leading-relaxed">{t.quote}</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-                    <span className="text-sm font-semibold text-green-700">
+                  <div className="w-10 h-10 rounded-full bg-[#EAF2FF] flex items-center justify-center">
+                    <span className="text-sm font-semibold text-[#0F4BD8]">
                       {t.name.split(" ").map((n) => n[0]).join("")}
                     </span>
                   </div>
@@ -333,7 +333,7 @@ export default function HomeVersion3() {
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
-              className="mt-4 md:mt-0 inline-flex items-center gap-2 px-5 py-2.5 bg-green-600 text-white font-medium rounded-full hover:bg-green-700 transition-colors"
+              className="mt-4 md:mt-0 inline-flex items-center gap-2 px-5 py-2.5 bg-[#155DFC] text-white font-medium rounded-full hover:bg-[#0F4BD8] transition-colors"
             >
               View All Blogs
               <ArrowUpRight className="w-4 h-4" />
@@ -361,7 +361,7 @@ export default function HomeVersion3() {
                   <p className="text-xs text-gray-500 mb-2">
                     {post.author} &bull; {post.readTime} read
                   </p>
-                  <h3 className="text-base font-semibold text-gray-900 group-hover:text-green-600 transition-colors mb-2 line-clamp-2">
+                  <h3 className="text-base font-semibold text-gray-900 group-hover:text-[#155DFC] transition-colors mb-2 line-clamp-2">
                     {post.title}
                   </h3>
                   <p className="text-sm text-gray-500 line-clamp-2">{post.excerpt}</p>
@@ -388,12 +388,12 @@ export default function HomeVersion3() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-5 py-3 rounded-full border border-gray-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="flex-1 px-5 py-3 rounded-full border border-gray-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#155DFC]"
                 />
                 <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="px-6 py-3 bg-green-600 text-white font-medium rounded-full hover:bg-green-700 transition-colors inline-flex items-center justify-center gap-2"
+                  className="px-6 py-3 bg-[#155DFC] text-white font-medium rounded-full hover:bg-[#0F4BD8] transition-colors inline-flex items-center justify-center gap-2"
                 >
                   Join With Us
                   <ArrowUpRight className="w-4 h-4" />

@@ -17,7 +17,7 @@ const reasons = [
     title: "Practical AI Curriculum",
     description:
       "Learn by doing with hands-on projects that mirror real industry challenges, not just theory.",
-    color: "#DFFBF1",
+    color: "#EAF2FF",
   },
   {
     icon: Users,
@@ -74,18 +74,18 @@ export default function WhyChooseSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-[#F8FAF9] rounded-3xl p-6 border border-[#E8EDE9] hover:border-[#00A86B]/30 hover:shadow-hover transition-all duration-300 group"
+              className="bg-[#F8FAFF] rounded-3xl p-6 border border-[#E4EAF5] hover:border-[#155DFC]/30 hover:shadow-hover transition-all duration-300 group"
             >
               <div
                 className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform"
                 style={{ backgroundColor: reason.color }}
               >
-                <reason.icon className="w-5 h-5 text-[#071C1A]" />
+                <reason.icon className="w-5 h-5 text-[#07162F]" />
               </div>
-              <h3 className="text-base font-bold text-[#071C1A] mb-2">
+              <h3 className="text-base font-bold text-[#07162F] mb-2">
                 {reason.title}
               </h3>
-              <p className="text-sm text-[#5A6B69] leading-relaxed">
+              <p className="text-sm text-[#5D667A] leading-relaxed">
                 {reason.description}
               </p>
             </motion.div>
@@ -107,10 +107,10 @@ export default function WhyChooseSection() {
             { value: "85%", label: "Placement Rate" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-[#00A86B] mb-1">
+              <div className="text-3xl lg:text-4xl font-bold text-[#155DFC] mb-1">
                 {stat.value}
               </div>
-              <div className="text-sm text-[#5A6B69]">{stat.label}</div>
+              <div className="text-sm text-[#5D667A]">{stat.label}</div>
             </div>
           ))}
         </motion.div>

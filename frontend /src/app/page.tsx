@@ -6,6 +6,7 @@ import MentorSection from "@/components/sections/MentorSection";
 import WhyChooseSection from "@/components/sections/WhyChooseSection";
 import JourneySection from "@/components/sections/JourneySection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
+import CodingPotentialWaitlistSection from "@/components/sections/CodingPotentialWaitlistSection";
 import FAQSection from "@/components/sections/FAQSection";
 import BlogSection from "@/components/sections/BlogSection";
 import CTASection from "@/components/sections/CTASection";
@@ -21,6 +22,7 @@ export default function Home() {
         <WhyChooseSection />
         <JourneySection />
         <TestimonialSection />
+        <CodingPotentialWaitlistSection />
         <FAQSection />
         <BlogSection />
         <CTASection />

@@ -15,15 +15,15 @@ function FAQItem({ item, index }: { item: (typeof faqItems)[0]; index: number })
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.06 }}
-      className="border border-[#E8EDE9] rounded-2xl bg-white overflow-hidden"
+      className="border border-[#E4EAF5] rounded-2xl bg-white overflow-hidden"
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-5 text-left hover:bg-[#FAFCFB] transition-colors"
+        className="w-full flex items-center justify-between p-5 text-left hover:bg-[#FAFCFF] transition-colors"
       >
         <span
           className={`text-sm font-semibold pr-4 transition-colors ${
-            isOpen ? "text-[#00A86B]" : "text-[#071C1A]"
+            isOpen ? "text-[#155DFC]" : "text-[#07162F]"
           }`}
         >
           {item.question}
@@ -31,8 +31,8 @@ function FAQItem({ item, index }: { item: (typeof faqItems)[0]; index: number })
         <span
           className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${
             isOpen
-              ? "bg-[#00A86B] text-white"
-              : "bg-[#F0F4F2] text-[#5A6B69]"
+              ? "bg-[#155DFC] text-white"
+              : "bg-[#EEF3FB] text-[#5D667A]"
           }`}
         >
           {isOpen ? (
@@ -53,8 +53,8 @@ function FAQItem({ item, index }: { item: (typeof faqItems)[0]; index: number })
             className="overflow-hidden"
           >
             <div className="px-5 pb-5 pt-0">
-              <div className="pt-3 border-t border-[#E8EDE9]">
-                <p className="text-sm text-[#5A6B69] leading-relaxed">
+              <div className="pt-3 border-t border-[#E4EAF5]">
+                <p className="text-sm text-[#5D667A] leading-relaxed">
                   {item.answer}
                 </p>
               </div>
@@ -68,7 +68,7 @@ function FAQItem({ item, index }: { item: (typeof faqItems)[0]; index: number })
 
 export default function FAQSection() {
   return (
-    <section id="faq" className="py-20 lg:py-28 bg-[#F8FAF9]">
+    <section id="faq" className="py-20 lg:py-28 bg-[#F8FAFF]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Frequently Asked Questions"
