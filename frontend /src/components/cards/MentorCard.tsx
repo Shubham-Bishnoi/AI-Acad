@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Twitter, Linkedin, Github } from "lucide-react";
+import { XIcon, LinkedInIcon, GitHubIcon } from "@/components/ui/BrandIcons";
 import type { Mentor } from "@/data/homeVariants";
 
 interface MentorCardProps {
@@ -29,13 +29,13 @@ export default function MentorCard({ mentor, index = 0 }: MentorCardProps) {
       <p className="text-xs text-[#9DBBFF]/90 mb-3">{mentor.role}</p>
       <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
         <button className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-          <Twitter className="w-3 h-3 text-white" />
+          <XIcon className="w-3 h-3 text-white" />
         </button>
         <button className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-          <Linkedin className="w-3 h-3 text-white" />
+          <LinkedInIcon className="w-3 h-3 text-white" />
         </button>
         <button className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-          <Github className="w-3 h-3 text-white" />
+          <GitHubIcon className="w-3 h-3 text-white" />
         </button>
       </div>
     </motion.div>
