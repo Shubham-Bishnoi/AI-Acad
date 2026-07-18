@@ -108,10 +108,10 @@ export const journeyStages: JourneyStage[] = [
 
 export const statusColors = {
   completed: {
-    bg: "#DCFCE7",
-    text: "#166534",
-    border: "#86EFAC",
-    dot: "#22C55E",
+    bg: "#EFF5FF",
+    text: "#0F4BD8",
+    border: "#C9DCFF",
+    dot: "#155DFC",
   },
   "in-progress": {
     bg: "#FEF3C7",

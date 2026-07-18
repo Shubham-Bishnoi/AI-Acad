@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "GFF AI Academy | Master AI Skills with Expert Mentors",
   description:
     "Build your future with GFF AI Academy. Master practical AI skills through structured learning, mentor-led guidance, real projects, certification, and placement readiness.",
+  // Icons are provided by the App Router file convention:
+  // app/favicon.ico (multi-size), app/icon.png, app/apple-icon.png —
+  // all cropped to the GFF hexagon mark so they stay legible at 16px.
 };
 
 export default function RootLayout({

@@ -37,11 +37,11 @@ const stageIcons: Record<string, React.ElementType> = {
 
 const statusConfig = {
   completed: {
-    bg: "bg-green-50",
-    border: "border-green-200",
-    dot: "bg-green-500",
-    text: "text-green-700",
-    line: "bg-green-400",
+    bg: "bg-[#EFF5FF]",
+    border: "border-[#C9DCFF]",
+    dot: "bg-[#155DFC]",
+    text: "text-[#0F4BD8]",
+    line: "bg-[#7FB0FF]",
   },
   "in-progress": {
     bg: "bg-amber-50",
@@ -91,7 +91,7 @@ function JourneyStep({
       {!isLast && (
         <div
           className={`absolute left-5 top-10 w-0.5 h-full ${
-            stage.status === "completed" ? "bg-green-400" : "bg-gray-200"
+            stage.status === "completed" ? "bg-[#7FB0FF]" : "bg-gray-200"
           }`}
         />
       )}

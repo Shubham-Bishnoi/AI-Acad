@@ -309,7 +309,7 @@ function CurriculumAccordion() {
                         className="flex items-center gap-3 py-2"
                       >
                         {topic.completed ? (
-                          <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
+                          <CheckCircle2 className="w-4 h-4 text-[#155DFC] shrink-0" />
                         ) : (
                           <Circle className="w-4 h-4 text-gray-300 shrink-0" />
                         )}
@@ -415,7 +415,7 @@ function AttendanceMarks() {
                   <span
                     className={`px-2 py-0.5 rounded-full text-[10px] font-medium ${
                       a.status === "completed"
-                        ? "bg-green-50 text-green-700"
+                        ? "bg-[#EFF5FF] text-[#0F4BD8]"
                         : a.status === "upcoming"
                         ? "bg-gray-50 text-gray-500"
                         : "bg-amber-50 text-amber-700"
@@ -463,7 +463,7 @@ function PlacementReadiness() {
             className="flex items-center gap-3 p-3 rounded-xl bg-[#F8FAFF]"
           >
             {item.status === "completed" ? (
-              <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-[#155DFC] shrink-0" />
             ) : item.status === "in-progress" ? (
               <Clock className="w-4 h-4 text-amber-400 shrink-0" />
             ) : item.status === "upcoming" ? (
@@ -477,7 +477,7 @@ function PlacementReadiness() {
             <span
               className={`text-[10px] font-medium px-2 py-0.5 rounded-full shrink-0 ${
                 item.status === "completed"
-                  ? "bg-green-50 text-green-700"
+                  ? "bg-[#EFF5FF] text-[#0F4BD8]"
                   : item.status === "in-progress"
                   ? "bg-amber-50 text-amber-700"
                   : item.status === "upcoming"
