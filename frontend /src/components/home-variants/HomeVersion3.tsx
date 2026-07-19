@@ -84,7 +84,7 @@ export default function HomeVersion3() {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-6 py-3 bg-brand-gradient text-white font-medium rounded-full transition-opacity hover:opacity-90 shadow-lg shadow-[#155DFC]/20"
+                className="px-6 py-3 bg-[#155DFC] text-white font-medium rounded-full transition-colors hover:bg-[#0F4BD8] shadow-lg shadow-[#155DFC]/20"
               >
                 Find Courses
               </motion.button>

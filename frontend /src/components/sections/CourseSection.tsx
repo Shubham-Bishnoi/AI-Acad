@@ -196,7 +196,7 @@ export default function CourseSection() {
         >
           <a
             href="/courses"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-gradient text-white text-sm font-semibold transition-all group hover:opacity-90"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#155DFC] text-white text-sm font-semibold transition-all group hover:bg-[#0F4BD8]"
           >
             View All Courses
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

@@ -93,7 +93,7 @@ function NewsletterCard() {
             />
             <button
               type="submit"
-              className="w-full rounded-full bg-brand-gradient px-5 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="w-full rounded-full bg-[#155DFC] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#0F4BD8] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Subscribe
             </button>

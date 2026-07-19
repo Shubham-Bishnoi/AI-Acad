@@ -64,7 +64,7 @@ export default function MentorSection() {
         >
           <a
             href="/mentors"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-gradient text-white text-sm font-semibold transition-all group shadow-sm hover:opacity-90 hover:shadow-md"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#155DFC] text-white text-sm font-semibold transition-all group shadow-sm hover:bg-[#0F4BD8] hover:shadow-md"
           >
             View All Mentors
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

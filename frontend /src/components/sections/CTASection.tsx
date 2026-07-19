@@ -38,7 +38,7 @@ export default function CTASection() {
               />
               <button
                 type="submit"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-brand-gradient text-white text-sm font-semibold transition-all group shadow-sm hover:opacity-90 hover:shadow-md shrink-0"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#155DFC] text-white text-sm font-semibold transition-all group shadow-sm hover:bg-[#0F4BD8] hover:shadow-md shrink-0"
               >
                 Join With Us
                 <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">

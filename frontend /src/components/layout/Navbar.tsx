@@ -176,7 +176,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="/apply"
-              className="group inline-flex items-center gap-2 rounded-full bg-brand-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:opacity-90 hover:shadow-md"
+              className="group inline-flex items-center gap-2 rounded-full bg-[#155DFC] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:bg-[#0F4BD8] hover:shadow-md"
             >
               Apply Now
               <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">
@@ -279,7 +279,7 @@ export default function Navbar() {
                 <Link
                   href="/apply"
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-brand-gradient text-white text-sm font-semibold transition-opacity hover:opacity-90"
+                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#155DFC] text-white text-sm font-semibold transition-colors hover:bg-[#0F4BD8]"
                 >
                   Apply Now
                   <ArrowUpRight className="w-4 h-4" />

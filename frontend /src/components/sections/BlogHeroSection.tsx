@@ -140,7 +140,7 @@ export default function BlogHeroSection() {
             >
               <a
                 href="#insights"
-                className="group inline-flex items-center gap-2 rounded-full bg-brand-gradient px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:opacity-90 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#155DFC]"
+                className="group inline-flex items-center gap-2 rounded-full bg-[#155DFC] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#0F4BD8] hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#155DFC]"
               >
                 Read Latest Insights
                 <span

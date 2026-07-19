@@ -61,7 +61,7 @@ function Block({ block }: { block: ContentBlock }) {
             <li key={item} className="flex items-start gap-3">
               <span
                 aria-hidden="true"
-                className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-gradient"
+                className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#155DFC]"
               />
               <span className="text-base leading-relaxed text-[#5D667A]">
                 {item}
@@ -266,7 +266,7 @@ export default async function BlogPostPage({
                 </h2>
                 <Link
                   href="/blog"
-                  className="hidden shrink-0 items-center gap-2 rounded-full bg-brand-gradient px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:inline-flex"
+                  className="hidden shrink-0 items-center gap-2 rounded-full bg-[#155DFC] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#0F4BD8] sm:inline-flex"
                 >
                   View All
                   <ArrowUpRight className="h-4 w-4" aria-hidden="true" />

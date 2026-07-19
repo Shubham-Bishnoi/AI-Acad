@@ -36,7 +36,7 @@ export default function PillButton({
 
   const variantStyles = {
     primary:
-      "bg-brand-gradient text-white shadow-sm transition-opacity hover:opacity-90 hover:shadow-md",
+      "bg-[#155DFC] text-white shadow-sm transition-colors hover:bg-[#0F4BD8] hover:shadow-md",
     secondary:
       "bg-white text-[#07162F] border border-[#E4EAF5] hover:border-[#155DFC] hover:text-[#155DFC] shadow-sm hover:shadow-md",
     outline:

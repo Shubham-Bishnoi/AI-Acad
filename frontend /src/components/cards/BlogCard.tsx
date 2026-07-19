@@ -210,7 +210,7 @@ export default function BlogCard({
               <Meta post={post} />
               <span
                 aria-hidden="true"
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#EEF6FF] text-[#155DFC] transition-colors group-hover:bg-brand-gradient group-hover:text-white"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#EEF6FF] text-[#155DFC] transition-colors group-hover:bg-[#155DFC] group-hover:text-white"
               >
                 <ArrowUpRight className="h-4 w-4" />
               </span>

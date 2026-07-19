@@ -101,20 +101,240 @@ body {
   background-image: linear-gradient(90deg, #D91F2D 0%, #7C3AED 50%, #155DFC 100%);
 }
 
-/* Custom gradient backgrounds — poster-inspired light futuristic washes */
-.gradient-hero {
-  background-image:
-    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.12), transparent 35%),
-    radial-gradient(circle at 80% 10%, rgba(217, 31, 45, 0.10), transparent 30%),
-    radial-gradient(circle at 60% 80%, rgba(124, 58, 237, 0.08), transparent 40%),
-    linear-gradient(135deg, #F8FAFF 0%, #F4F7FF 45%, #FFF3F7 100%);
+/* ==========================================================================
+   Animated brand gradient — slow drifting red/blue light
+   --------------------------------------------------------------------------
+   Two large, very soft radial "orbs" (one blue, one red, each carrying a
+   purple mid-stop so their overlap reads as the brand's purple bridge) drift
+   across the surface on long, mismatched cycles.
+
+   Design notes:
+   - Only `transform` and `opacity` animate, so the browser composites on the
+     GPU — no layout, no repaint.
+   - Softness comes from radial-gradient colour stops, NOT `filter: blur()`,
+     which would be far more expensive on a surface this large.
+   - Orbs sit at `z-index: -1` inside an `isolation: isolate` stacking context,
+     so they paint above the element's own background but below all content.
+     That means no component markup or child z-index has to change.
+   - Travel paths stay biased toward the outer edges so the centre of the
+     surface — where headings live — remains luminous and readable.
+   ========================================================================== */
+
+@keyframes brand-orb-blue {
+  from {
+    transform: translate3d(6%, -5%, 0) scale(1);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate3d(-7%, 6%, 0) scale(1.16);
+    opacity: 0.72;
+  }
 }
 
+@keyframes brand-orb-red {
+  from {
+    transform: translate3d(-6%, 5%, 0) scale(1.12);
+    opacity: 0.7;
+  }
+  to {
+    transform: translate3d(7%, -6%, 0) scale(1);
+    opacity: 0.46;
+  }
+}
+
+.animated-brand-gradient {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.animated-brand-gradient::before,
+.animated-brand-gradient::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Blue orb — enters from the upper right, drifts toward centre */
+.animated-brand-gradient::before {
+  top: -34%;
+  right: -30%;
+  width: 78%;
+  height: 132%;
+  min-width: 440px;
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(21, 93, 252, 0.36) 0%,
+    rgba(47, 107, 255, 0.22) 22%,
+    rgba(124, 58, 237, 0.1) 42%,
+    rgba(124, 58, 237, 0) 62%
+  );
+  animation: brand-orb-blue 14s ease-in-out infinite alternate;
+}
+
+/* Red orb — enters from the lower left, drifts upward */
+.animated-brand-gradient::after {
+  bottom: -34%;
+  left: -28%;
+  width: 74%;
+  height: 122%;
+  min-width: 420px;
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(217, 31, 45, 0.26) 0%,
+    rgba(239, 59, 77, 0.16) 22%,
+    rgba(124, 58, 237, 0.09) 42%,
+    rgba(124, 58, 237, 0) 62%
+  );
+  animation: brand-orb-red 18s ease-in-out infinite alternate;
+}
+
+/* Softer, slower variant for smaller surfaces that sit close to body copy */
+.animated-brand-gradient-soft::before {
+  opacity: 0.7;
+  animation-duration: 20s;
+}
+
+.animated-brand-gradient-soft::after {
+  opacity: 0.7;
+  animation-duration: 26s;
+}
+
+/* Smaller orbs on phones — less overdraw, less layer memory */
+@media (max-width: 640px) {
+  .animated-brand-gradient::before,
+  .animated-brand-gradient::after {
+    width: 116%;
+    height: 84%;
+    min-width: 0;
+  }
+}
+
+/* Standalone drifting orb, for sections that already position their own
+   decorative blobs (e.g. the navy waitlist band). */
+.brand-orb-drift-a {
+  animation: brand-orb-blue 16s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
+.brand-orb-drift-b {
+  animation: brand-orb-red 21s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
+/* Custom gradient backgrounds — poster-inspired light futuristic washes.
+   The base wash stays static; the drifting colour comes from the orbs above. */
+.gradient-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-image: linear-gradient(
+    135deg,
+    #f8faff 0%,
+    #f4f7ff 45%,
+    #fff3f7 100%
+  );
+}
+
+.gradient-hero::before,
+.gradient-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.gradient-hero::before {
+  top: -34%;
+  right: -30%;
+  width: 78%;
+  height: 132%;
+  min-width: 440px;
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(21, 93, 252, 0.36) 0%,
+    rgba(47, 107, 255, 0.22) 22%,
+    rgba(124, 58, 237, 0.1) 42%,
+    rgba(124, 58, 237, 0) 62%
+  );
+  animation: brand-orb-blue 14s ease-in-out infinite alternate;
+}
+
+.gradient-hero::after {
+  bottom: -34%;
+  left: -28%;
+  width: 74%;
+  height: 122%;
+  min-width: 420px;
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(217, 31, 45, 0.26) 0%,
+    rgba(239, 59, 77, 0.16) 22%,
+    rgba(124, 58, 237, 0.09) 42%,
+    rgba(124, 58, 237, 0) 62%
+  );
+  animation: brand-orb-red 18s ease-in-out infinite alternate;
+}
+
+@media (max-width: 640px) {
+  .gradient-hero::before,
+  .gradient-hero::after {
+    width: 116%;
+    height: 84%;
+    min-width: 0;
+  }
+}
+
+/* CTA cards sit directly behind body copy and a form, so the orbs here are
+   dialled back and run slower than the hero. */
 .gradient-cta {
-  background-image:
-    radial-gradient(circle at 15% 25%, rgba(217, 31, 45, 0.12), transparent 40%),
-    radial-gradient(circle at 85% 20%, rgba(21, 93, 252, 0.14), transparent 40%),
-    linear-gradient(135deg, #FFF3F7 0%, #F6F1FF 50%, #EEF6FF 100%);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-image: linear-gradient(
+    135deg,
+    #fff3f7 0%,
+    #f6f1ff 50%,
+    #eef6ff 100%
+  );
+}
+
+.gradient-cta::before,
+.gradient-cta::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  width: 70%;
+  height: 150%;
+  will-change: transform, opacity;
+}
+
+.gradient-cta::before {
+  top: -40%;
+  right: -12%;
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(21, 93, 252, 0.26) 0%,
+    rgba(124, 58, 237, 0.12) 42%,
+    rgba(124, 58, 237, 0) 70%
+  );
+  animation: brand-orb-blue 18s ease-in-out infinite alternate;
+}
+
+.gradient-cta::after {
+  bottom: -40%;
+  left: -12%;
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(217, 31, 45, 0.22) 0%,
+    rgba(124, 58, 237, 0.1) 42%,
+    rgba(124, 58, 237, 0) 70%
+  );
+  animation: brand-orb-red 24s ease-in-out infinite alternate;
 }
 
 .gradient-footer {
@@ -242,5 +462,21 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  /* Fully stop the drifting gradient orbs rather than letting the blanket rule
+     above race them to their end state — this leaves them resting in their
+     natural, composed position. The gradient itself stays; only motion goes. */
+  .animated-brand-gradient::before,
+  .animated-brand-gradient::after,
+  .gradient-hero::before,
+  .gradient-hero::after,
+  .gradient-cta::before,
+  .gradient-cta::after,
+  .brand-orb-drift-a,
+  .brand-orb-drift-b {
+    animation: none !important;
+    transform: none !important;
+    opacity: 0.7 !important;
   }
 }

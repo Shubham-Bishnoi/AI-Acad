@@ -129,8 +129,14 @@ export default function CodingPotentialWaitlistSection() {
 
   return (
     <section className="py-16 md:py-24 bg-brand-navy relative overflow-hidden">
-      <div className="absolute left-[-8rem] top-8 h-56 w-56 rounded-full bg-[#155DFC]/20 blur-3xl" />
-      <div className="absolute bottom-[-6rem] right-[-4rem] h-64 w-64 rounded-full bg-[#D91F2D]/16 blur-3xl" />
+      <div
+        aria-hidden="true"
+        className="brand-orb-drift-a pointer-events-none absolute left-[-8rem] top-8 h-56 w-56 rounded-full bg-[#155DFC]/20 blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="brand-orb-drift-b pointer-events-none absolute bottom-[-6rem] right-[-4rem] h-64 w-64 rounded-full bg-[#D91F2D]/16 blur-3xl"
+      />
 
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.04]">
@@ -202,7 +208,7 @@ export default function CodingPotentialWaitlistSection() {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 rounded-full bg-brand-gradient px-7 py-3.5 font-medium text-white shadow-lg shadow-[#155DFC]/25 transition-opacity hover:opacity-90"
+                className="inline-flex items-center gap-2 rounded-full bg-[#155DFC] px-7 py-3.5 font-medium text-white shadow-lg shadow-[#155DFC]/25 transition-colors hover:bg-[#0F4BD8]"
               >
                 Join Waitlist
               </motion.button>

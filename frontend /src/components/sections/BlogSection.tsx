@@ -38,7 +38,7 @@ export default function BlogSection() {
           </div>
           <Link
             href="/blog"
-            className="hidden shrink-0 items-center gap-2 rounded-full bg-brand-gradient px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#155DFC] sm:inline-flex"
+            className="hidden shrink-0 items-center gap-2 rounded-full bg-[#155DFC] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#0F4BD8] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#155DFC] sm:inline-flex"
           >
             View All Insights
             <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
@@ -114,7 +114,7 @@ export default function BlogSection() {
         <div className="mt-10 text-center sm:hidden">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 rounded-full bg-brand-gradient px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-full bg-[#155DFC] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#0F4BD8]"
           >
             View All Insights
             <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
