@@ -122,23 +122,23 @@ body {
 
 @keyframes brand-orb-blue {
   from {
-    transform: translate3d(6%, -5%, 0) scale(1);
-    opacity: 0.5;
+    transform: translate3d(11%, -9%, 0) scale(1);
+    opacity: 0.48;
   }
   to {
-    transform: translate3d(-7%, 6%, 0) scale(1.16);
-    opacity: 0.72;
+    transform: translate3d(-12%, 10%, 0) scale(1.22);
+    opacity: 0.76;
   }
 }
 
 @keyframes brand-orb-red {
   from {
-    transform: translate3d(-6%, 5%, 0) scale(1.12);
-    opacity: 0.7;
+    transform: translate3d(-11%, 9%, 0) scale(1.18);
+    opacity: 0.74;
   }
   to {
-    transform: translate3d(7%, -6%, 0) scale(1);
-    opacity: 0.46;
+    transform: translate3d(12%, -10%, 0) scale(1);
+    opacity: 0.44;
   }
 }
 
@@ -160,7 +160,7 @@ body {
 /* Blue orb — enters from the upper right, drifts toward centre */
 .animated-brand-gradient::before {
   top: -34%;
-  right: -30%;
+  right: -35%;
   width: 78%;
   height: 132%;
   min-width: 440px;
@@ -171,13 +171,13 @@ body {
     rgba(124, 58, 237, 0.1) 42%,
     rgba(124, 58, 237, 0) 62%
   );
-  animation: brand-orb-blue 14s ease-in-out infinite alternate;
+  animation: brand-orb-blue 8s ease-in-out infinite alternate;
 }
 
 /* Red orb — enters from the lower left, drifts upward */
 .animated-brand-gradient::after {
   bottom: -34%;
-  left: -28%;
+  left: -33%;
   width: 74%;
   height: 122%;
   min-width: 420px;
@@ -188,18 +188,18 @@ body {
     rgba(124, 58, 237, 0.09) 42%,
     rgba(124, 58, 237, 0) 62%
   );
-  animation: brand-orb-red 18s ease-in-out infinite alternate;
+  animation: brand-orb-red 11s ease-in-out infinite alternate;
 }
 
 /* Softer, slower variant for smaller surfaces that sit close to body copy */
 .animated-brand-gradient-soft::before {
   opacity: 0.7;
-  animation-duration: 20s;
+  animation-duration: 14s;
 }
 
 .animated-brand-gradient-soft::after {
   opacity: 0.7;
-  animation-duration: 26s;
+  animation-duration: 18s;
 }
 
 /* Smaller orbs on phones — less overdraw, less layer memory */
@@ -215,12 +215,12 @@ body {
 /* Standalone drifting orb, for sections that already position their own
    decorative blobs (e.g. the navy waitlist band). */
 .brand-orb-drift-a {
-  animation: brand-orb-blue 16s ease-in-out infinite alternate;
+  animation: brand-orb-blue 10s ease-in-out infinite alternate;
   will-change: transform, opacity;
 }
 
 .brand-orb-drift-b {
-  animation: brand-orb-red 21s ease-in-out infinite alternate;
+  animation: brand-orb-red 13s ease-in-out infinite alternate;
   will-change: transform, opacity;
 }
 
@@ -249,7 +249,7 @@ body {
 
 .gradient-hero::before {
   top: -34%;
-  right: -30%;
+  right: -35%;
   width: 78%;
   height: 132%;
   min-width: 440px;
@@ -260,12 +260,12 @@ body {
     rgba(124, 58, 237, 0.1) 42%,
     rgba(124, 58, 237, 0) 62%
   );
-  animation: brand-orb-blue 14s ease-in-out infinite alternate;
+  animation: brand-orb-blue 8s ease-in-out infinite alternate;
 }
 
 .gradient-hero::after {
   bottom: -34%;
-  left: -28%;
+  left: -33%;
   width: 74%;
   height: 122%;
   min-width: 420px;
@@ -276,7 +276,7 @@ body {
     rgba(124, 58, 237, 0.09) 42%,
     rgba(124, 58, 237, 0) 62%
   );
-  animation: brand-orb-red 18s ease-in-out infinite alternate;
+  animation: brand-orb-red 11s ease-in-out infinite alternate;
 }
 
 @media (max-width: 640px) {
@@ -322,7 +322,7 @@ body {
     rgba(124, 58, 237, 0.12) 42%,
     rgba(124, 58, 237, 0) 70%
   );
-  animation: brand-orb-blue 18s ease-in-out infinite alternate;
+  animation: brand-orb-blue 12s ease-in-out infinite alternate;
 }
 
 .gradient-cta::after {
@@ -334,7 +334,7 @@ body {
     rgba(124, 58, 237, 0.1) 42%,
     rgba(124, 58, 237, 0) 70%
   );
-  animation: brand-orb-red 24s ease-in-out infinite alternate;
+  animation: brand-orb-red 15s ease-in-out infinite alternate;
 }
 
 .gradient-footer {
